@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="lib-notincluded">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/BlingClockRegistration/lib-notincluded" />
+      <root url="file://$PROJECT_DIR$/CountdownTimer/lib" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/BlingClockRegistration/lib-notincluded" recursive="false" />
+    <jarDirectory url="file://$PROJECT_DIR$/CountdownTimer/lib" recursive="false" />
+  </library>
+</component>

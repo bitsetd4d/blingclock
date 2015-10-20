@@ -1,0 +1,40 @@
+<project name="built-licensing-client-jar" default="build-all">
+	
+	<property name="build.dir" location="/tmp/license"/>
+	<property name="build.res.dir" location="/tmp/license/res"/>
+	<property name="build.src.dir" location="/tmp/license/src"/>
+	<property name="build.dst.dir" location="/tmp/license/dst"/>
+	<property name="workspace" location="${basedir}/.."/>
+	
+	<target name="init">
+		<delete dir="${build.dir}" failonerror="false"/>
+		<mkdir dir="${build.dir}"/>
+		<mkdir dir="${build.res.dir}"/>
+		<mkdir dir="${build.src.dir}"/>
+		<mkdir dir="${build.dst.dir}"/>
+	</target>
+	
+	
+	<target name="copy-source" depends="init">
+		  <copy todir="${build.src.dir}">
+		    <fileset dir="${workspace}/LicensingClient/src"/>
+		  </copy>
+	</target>
+
+	<target name="compile">
+		<javac srcdir="${build.src.dir}"
+         destdir="${build.dst.dir}"
+         debug="off"/>
+	</target>
+	
+	<target name="jarit" depends="compile">
+		<jar destfile="build/license-client.jar">
+		  <fileset dir="${build.dst.dir}">
+    		<include name="**/*.class"/>
+		  </fileset>
+		</jar>
+	</target>
+	
+	<target name="build-all" depends="init,copy-source,compile,jarit"/>
+	
+</project>

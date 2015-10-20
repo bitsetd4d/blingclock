@@ -1,0 +1,79 @@
+<project name="countdown-timer" default="build-all">
+	
+	<taskdef resource="proguard/ant/task.properties"
+	         classpath="../ProGuard3.8/lib/proguard.jar" />
+	
+	<property name="build.dir" location="/tmp/countdown"/>
+	<property name="build.res.dir" location="/tmp/countdown/res"/>
+	<property name="build.src.dir" location="/tmp/countdown/src"/>
+	<property name="build.dst.dir" location="/tmp/countdown/dst"/>
+	<property name="workspace" location="${basedir}/.."/>
+	
+	<target name="init">
+		<delete dir="${build.dir}" failonerror="false"/>
+		<mkdir dir="${build.dir}"/>
+		<mkdir dir="${build.res.dir}"/>
+		<mkdir dir="${build.src.dir}"/>
+		<mkdir dir="${build.dst.dir}"/>
+	</target>
+	
+	
+	<target name="copy-source" depends="init">
+		  <copy todir="${build.src.dir}">
+		    <fileset dir="${workspace}/CountdownTimer/src"/>
+		    <fileset dir="${workspace}/TimingFramework/src"/>
+		    <fileset dir="${workspace}/LicensingClient/src"/>
+		  </copy>
+	</target>
+
+	<target name="copy-resources" depends="init">
+		  <copy todir="${build.res.dir}">
+		    <fileset dir="${workspace}/CountdownTimer/">
+		    	<exclude name="**/*.java"/>
+		    	<exclude name="**/*.properties"/>
+		    </fileset>	
+		  </copy>
+		  <copy todir="${build.dst.dir}">
+		    <fileset dir="${build.src.dir}">
+		    	<include name="**/*.properties"/>
+		    </fileset>	
+		  </copy>
+		  <unjar src="${workspace}/CountdownTimer/lib/swing-layout-1.0.jar" dest="${build.dst.dir}"/>
+	</target>
+
+	<target name="compile" depends="copy-source,copy-resources">
+		<javac srcdir="${build.src.dir}"
+         destdir="${build.dst.dir}"
+         source="5"
+		 target="5"
+         debug="off"/>
+	</target>
+	
+	<target name="jarit" depends="compile">
+		<jar destfile="${build.dst.dir}/countdown30.jar">
+		  <fileset dir="${build.dst.dir}">
+    		<include name="**/*.class"/>
+    		<include name="**/*.properties"/>
+		  </fileset>
+		  <fileset dir="${build.res.dir}">
+    		<exclude name="**/*.java"/>
+    		<exclude name="**/*.class"/>
+    		<exclude name="build.xml"/> 
+    		<exclude name="build-tiny-proto.xml"/> 
+    		<exclude name="**.*.pro"/> 
+		  </fileset>
+		  <manifest>
+		  	<attribute name="Main-Class" value="countdowntimer.Main"/>
+		  	<attribute name="SplashScreen-Image" value="images/bling-splash-2.png"/>
+		  </manifest>
+		</jar>
+	</target>
+	
+	<target name="obfuscateit" depends="jarit">
+		<proguard configuration="countdowntimer-windows.pro"/>
+		<copy file="${build.dst.dir}/countdown30go.jar" todir="/BlingClockDev/build"/>
+	</target>
+	
+	<target name="build-all" depends="compile,jarit,obfuscateit"/>
+	
+</project>

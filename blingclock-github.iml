@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/BlingClockRegistration/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CountdownCore/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/CountdownTimer/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/LicensingClient/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/LicensingServer/src" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/TimingFramework/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="lib-included" level="project" />
+    <orderEntry type="library" name="lib-notincluded" level="project" />
+    <orderEntry type="library" name="lib" level="project" />
+  </component>
+</module>

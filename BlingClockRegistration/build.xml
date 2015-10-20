@@ -1,0 +1,66 @@
+<project name="Build registration war" default="all" basedir=".">
+
+	<property name="dirs.base" value="${basedir}"/>
+	<property name="build.dir" value="${basedir}/build/tmp"/>
+	
+	<property name="src" value="${dirs.base}/src"/> 
+	<property name="web" value="${dirs.base}/WebContent"/>
+	<property name="deploymentdescription" value="${dirs.base}/build/deploymentdescriptors"/>
+
+	<property name="warDir"  value="${build.dir}/war"/>
+
+	<target name="init">
+		<delete dir="${build.dir}"/>
+		<mkdir dir="${build.dir}/classes"/>
+	</target>
+	
+	<target name="clean">
+		<delete dir="${build.dir}"/>
+	</target>
+	
+	<!-- Compile Java Files and store in /build/src directory -->
+	<target name="build" >
+		<path id="compile.classpath">
+			<fileset dir="${web}/WEB-INF/lib">
+		    	<include name="**/*.jar"/>
+		    </fileset>
+		    <fileset dir="${basedir}/lib-notincluded">
+		    	<include name="**/*.jar"/>
+		    </fileset>
+		</path>
+		<javac classpathref="compile.classpath" srcdir="${src}" destdir="${build.dir}/classes" debug="true" includes="**/*.java" />
+	</target>
+	
+	<!-- Create the War File -->
+	<target name="buildWar" depends="init">
+		<mkdir dir="${build.dir}/WEB-INF/classes"/>
+		<copy todir="${build.dir}/WEB-INF/classes">
+			<fileset dir="${build.dir}/classes" includes="**/*.class" /> 
+		</copy>
+		<copy todir="${build.dir}/WEB-INF/classes">
+			<fileset dir="${src}" includes="**/*.properties" /> 
+		</copy>
+	
+		<copy todir="${build.dir}/WEB-INF">
+			<fileset dir="${web}/WEB-INF"/> 
+		</copy>
+	
+		<copy todir="${build.dir}">
+			<fileset dir="${web}" includes="**/*.*" /> 
+		</copy>
+		
+		<copy todir="${build.dir}/WEB-INF/lib">
+			<fileset dir="${basedir}/lib-included" includes="**/*.jar" /> 
+		</copy>
+		
+		<copyfile dest="${build.dir}/WEB-INF/web.xml" src="${build.dir}/WEB-INF/web-test.xml" forceoverwrite="true"/>
+		<war basedir="${build.dir}" destfile="${basedir}/output/registration-test.war"/>
+
+		<copyfile dest="${build.dir}/WEB-INF/web.xml" src="${build.dir}/WEB-INF/web-prod.xml" forceoverwrite="true"/>
+		<war basedir="${build.dir}" destfile="${basedir}/output/registration-prod.war" />
+
+	</target>
+	
+	<target name="all" depends="init,build,buildWar,clean"/>
+
+</project>

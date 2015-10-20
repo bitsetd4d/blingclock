@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib-included">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/BlingClockRegistration/lib-included" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$PROJECT_DIR$/BlingClockRegistration/lib-included" recursive="false" />
+  </library>
+</component>

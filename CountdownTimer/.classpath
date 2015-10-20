@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="lib/swing-layout-1.0.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/TimingFramework"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/CountdownCore"/>
+	<classpathentry kind="lib" path="lib/license-client.jar"/>
+	<classpathentry kind="lib" path="lib/tritonus_mp3-0.3.6.jar"/>
+	<classpathentry kind="lib" path="lib/tritonus_share-0.3.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

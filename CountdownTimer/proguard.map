@@ -1,0 +1,3512 @@
+blingclock.controls.AbstractFilter -> dB:
+    java.awt.image.BufferedImage filter(java.awt.image.BufferedImage,java.awt.image.BufferedImage) -> filter
+    java.awt.geom.Rectangle2D getBounds2D(java.awt.image.BufferedImage) -> getBounds2D
+    java.awt.image.BufferedImage createCompatibleDestImage(java.awt.image.BufferedImage,java.awt.image.ColorModel) -> createCompatibleDestImage
+    java.awt.geom.Point2D getPoint2D(java.awt.geom.Point2D,java.awt.geom.Point2D) -> getPoint2D
+    java.awt.RenderingHints getRenderingHints() -> getRenderingHints
+blingclock.controls.ButtonFadingController -> cV:
+    java.lang.Object buttonLock -> a
+    java.lang.Object stopLock -> b
+    java.util.List fadingInButtons -> a
+    java.util.List fadingOutButtons -> b
+    java.util.List doneButtons -> c
+    java.util.Timer fadeTimer -> a
+    blingclock.controls.ButtonFadingController$FadeTimerTask myTimerTask -> a
+    blingclock.controls.ButtonFadingController INSTANCE -> a
+    blingclock.controls.ButtonFadingController getInstance() -> a
+    void start() -> b
+    void fadeIn$68c3e7f9(blingclock.controls.GlowButton) -> a
+    void fadeOut$68c3e7f9(blingclock.controls.GlowButton) -> b
+    void stop$68c3e7f9(blingclock.controls.GlowButton) -> c
+    void onTimerFired() -> a
+blingclock.controls.ButtonFadingController$1 -> cr:
+blingclock.controls.ButtonFadingController$FadeTimerTask -> gc:
+    blingclock.controls.ButtonFadingController this$0 -> a
+    void run() -> run
+blingclock.controls.ButtonHeldTimerCallbacks -> dy:
+    javax.swing.Timer buttonHoldTimer -> a
+    java.util.List listeners -> a
+    boolean firstCallFromHoldTimer -> a
+    void addListener$48cfff11(blingclock.controls.GlowButtonAdapter) -> a
+    void initButtonHeldTimer() -> d
+    void onMousePressed() -> a
+    void onMouseReleased() -> b
+    void onButtonHeldTimerFired() -> c
+blingclock.controls.ButtonHeldTimerCallbacks$1 -> M:
+    blingclock.controls.ButtonHeldTimerCallbacks this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+blingclock.controls.FastBlurFilter -> eX:
+    int radius -> a
+    java.awt.image.BufferedImage filter(java.awt.image.BufferedImage,java.awt.image.BufferedImage) -> filter
+    void blur(int[],int[],int,int,int) -> a
+blingclock.controls.GlowButton -> dX:
+    blingclock.controls.FastBlurFilter blurFilter1 -> a
+    blingclock.controls.FastBlurFilter blurFilter2 -> b
+    java.awt.image.BufferedImage armedImage -> a
+    java.awt.image.BufferedImage normalImage -> b
+    java.awt.image.BufferedImage rolloverImage -> c
+    java.awt.image.BufferedImage[] fadeImages -> a
+    java.awt.image.BufferedImage[] pulseImages -> b
+    boolean pulsing -> a
+    int pulseindex -> a
+    int pulsedx -> b
+    blingclock.controls.GlowButton$Style style -> a
+    boolean inverted -> b
+    double fadeInFactor -> a
+    double fadeOutFactor -> b
+    float fadeInPerMs -> b
+    float fadeOutPerMs -> c
+    javax.swing.Timer pulseTimer -> a
+    javax.swing.Timer buttonHoldTimer -> b
+    long fadeInTimerStarted -> a
+    long fadeOutTimerStarted -> b
+    float fadeWhenTimerStarted -> d
+    java.util.List listeners -> a
+    blingclock.controls.GlowButton linkedCopy -> a
+    blingclock.controls.GlowButton masterButton -> b
+    boolean invisibleWhenDimmed -> c
+    long millisBeforeFade -> c
+    long millisBeforeFadeNow -> d
+    java.lang.String tag -> a
+    boolean repaintPending -> d
+    boolean faded -> e
+    java.awt.image.BufferedImage fadeImage -> d
+    float fade -> a
+    float intensity -> e
+    java.lang.Object fadeLock -> a
+    float fadeOutLimit -> f
+    boolean firstCallFromHoldTimer -> f
+    java.awt.FontMetrics fm -> a
+    void repaint() -> repaint
+    void setDelayBeforeFade(long) -> a
+    blingclock.controls.GlowButton makeLinkedCopy() -> a
+    void setupMasterButton(blingclock.controls.GlowButton) -> c
+    void setTag(java.lang.String) -> a
+    blingclock.controls.GlowButton getCompanionButton() -> b
+    void setInvisibleWhenDimmed(boolean) -> a
+    void setStyle(blingclock.controls.GlowButton$Style) -> a
+    void setInverted(boolean) -> b
+    void setVisible(boolean) -> setVisible
+    void setEnabled(boolean) -> setEnabled
+    void startPulsing(int) -> a
+    void stopPulsing() -> a
+    void onPulse() -> i
+    void fadeIn() -> b
+    void fadeOut() -> c
+    void setIntensity(float) -> a
+    java.awt.image.BufferedImage getFadeImage() -> a
+    void onFadeInTimerFired() -> d
+    void onFadeOutTimerFired() -> e
+    void addListener$48cfff11(blingclock.controls.GlowButtonAdapter) -> a
+    void onMousePressed() -> f
+    void onMouseReleased() -> g
+    void onButtonHeldTimerFired() -> h
+    void paint(java.awt.Graphics) -> paint
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    void repaintIfNeeded() -> j
+    void setText(java.lang.String) -> setText
+    void setForeground(java.awt.Color) -> setForeground
+    void setupImages() -> k
+    void setHorizontalAlignment(int) -> setHorizontalAlignment
+    void createPulseImages(int,int) -> a
+    java.awt.image.BufferedImage createTransparentImage(java.awt.image.BufferedImage,float) -> a
+    java.awt.image.BufferedImage createGlowImage(int,int,int,int,int,int,blingclock.controls.FastBlurFilter,blingclock.controls.FastBlurFilter) -> a
+    void init() -> l
+    void initButtonHeldTimer() -> m
+    void drawTriangle(java.awt.Graphics2D,int,int,int) -> a
+    void drawRectangles(java.awt.Graphics2D,int,int,int) -> b
+    void drawPlus(java.awt.Graphics2D,int,int,int) -> c
+    void drawMinus(java.awt.Graphics2D,int,int,int) -> d
+    void drawCompact$431c48e(java.awt.Graphics2D,int) -> a
+    void drawClose$431c48e(java.awt.Graphics2D,int,int) -> a
+    void drawMinimize$431c48e(java.awt.Graphics2D,int,int) -> b
+    void drawMaximize$431c48e(java.awt.Graphics2D,int,int) -> c
+    void drawRemoveTitlebar$43184bd(java.awt.Graphics2D,int,boolean) -> a
+    void drawResize(java.awt.Graphics2D,int,int) -> d
+    void drawTweak$4a2fedb1(java.awt.Graphics2D) -> a
+    void drawText$431c48e(java.awt.Graphics2D,int,int) -> e
+    int getTextWidth(java.lang.String) -> a
+    void drawContent(java.awt.Graphics2D,int,int,int) -> e
+    blingclock.controls.GlowButton access$000(blingclock.controls.GlowButton) -> a
+    void access$100(blingclock.controls.GlowButton) -> a
+    void access$200(blingclock.controls.GlowButton) -> b
+blingclock.controls.GlowButton$1 -> ej:
+    blingclock.controls.GlowButton this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+blingclock.controls.GlowButton$2 -> ef:
+    blingclock.controls.GlowButton this$0 -> a
+    void componentResized(java.awt.event.ComponentEvent) -> componentResized
+blingclock.controls.GlowButton$3 -> ee:
+    blingclock.controls.GlowButton this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+blingclock.controls.GlowButton$4 -> ec:
+    blingclock.controls.GlowButton this$0 -> a
+    void mousePressed(java.awt.event.MouseEvent) -> mousePressed
+    void mouseReleased(java.awt.event.MouseEvent) -> mouseReleased
+blingclock.controls.GlowButton$5 -> dO:
+    blingclock.controls.GlowButton this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+blingclock.controls.GlowButton$Style -> aO:
+    blingclock.controls.GlowButton$Style PLAY -> a
+    blingclock.controls.GlowButton$Style PAUSE -> b
+    blingclock.controls.GlowButton$Style TEXT -> c
+    blingclock.controls.GlowButton$Style PLUS -> d
+    blingclock.controls.GlowButton$Style MINUS -> e
+    blingclock.controls.GlowButton$Style COMPACT_MODE -> f
+    blingclock.controls.GlowButton$Style CLOSE -> g
+    blingclock.controls.GlowButton$Style MINIMIZE -> h
+    blingclock.controls.GlowButton$Style MAXIMIZE -> i
+    blingclock.controls.GlowButton$Style REMOVE_TITLEBAR -> j
+    blingclock.controls.GlowButton$Style ADD_TITLEBAR -> k
+    blingclock.controls.GlowButton$Style RESIZE -> l
+    blingclock.controls.GlowButton$Style TWEAK -> m
+    blingclock.controls.GlowButton$Style[] $VALUES -> a
+    blingclock.controls.GlowButton$Style[] values() -> values
+    blingclock.controls.GlowButton$Style valueOf(java.lang.String) -> valueOf
+blingclock.controls.GlowButtonAdapter -> fm:
+    void onStartHeldForPeriod() -> b
+    void onClicked() -> a
+    void onHeldTick() -> c
+    void onStopHeldForPeriod() -> d
+blingclock.controls.HQJLabel -> dg:
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    void repaint() -> repaint
+blingclock.controls.RepaintController -> R:
+    java.awt.Component[] toPaint -> a
+    int index -> a
+    java.lang.Object lock -> a
+    boolean inFlight -> a
+    java.util.concurrent.Executor exec -> a
+    java.lang.Runnable repaintTask -> a
+    java.awt.Component[] toPaintNow -> b
+    void repaint(java.awt.Component) -> a
+    void triggerRepaint() -> b
+    void repaintNow() -> c
+    void access$100() -> a
+blingclock.controls.RepaintController$1 -> bs:
+blingclock.controls.RepaintController$RepaintTask -> C:
+    void run() -> run
+blingclock.controls.RepeatingButton -> dY:
+    int delay -> a
+    int repeat -> b
+    javax.swing.Timer repeatTimer -> a
+    javax.swing.Timer actionTimer -> b
+    void initTimers() -> a
+    void onActionTimerFired() -> b
+    void onRepeatTimerFired() -> c
+    void access$000(blingclock.controls.RepeatingButton) -> a
+    void access$100(blingclock.controls.RepeatingButton) -> b
+    javax.swing.Timer access$200(blingclock.controls.RepeatingButton) -> a
+    javax.swing.Timer access$300(blingclock.controls.RepeatingButton) -> b
+blingclock.controls.RepeatingButton$1 -> dz:
+    blingclock.controls.RepeatingButton this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+blingclock.controls.RepeatingButton$2 -> dA:
+    blingclock.controls.RepeatingButton this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+blingclock.controls.RepeatingButton$3 -> dI:
+    blingclock.controls.RepeatingButton this$0 -> a
+    void mousePressed(java.awt.event.MouseEvent) -> mousePressed
+    void mouseReleased(java.awt.event.MouseEvent) -> mouseReleased
+    void mouseExited(java.awt.event.MouseEvent) -> mouseExited
+blingclock.controls.SimpleImageButton -> cS:
+    void paintComponent(java.awt.Graphics) -> paintComponent
+blingclock.digits.DecimalDigitPanel -> cp:
+    blingclock.digits.LEDDigit d1 -> a
+    blingclock.digits.LEDDigit d2 -> b
+    void init() -> a
+    void setShowRegistered(boolean) -> a
+    void setDecimal(long) -> a
+    void setBlink(boolean) -> b
+blingclock.digits.DigitDecorationPanel -> bg:
+    boolean rightToleft -> a
+    java.util.List buttons -> a
+    java.util.List controls -> b
+    void onWindowResized() -> a
+    void setupButtons(java.util.List) -> a
+    void setupControls(java.util.List) -> b
+    void addButtonsToSelf() -> b
+    void layoutButtons() -> c
+blingclock.digits.DigitDecorationPanel$1 -> cy:
+    blingclock.digits.DigitDecorationPanel this$0 -> a
+    void componentResized(java.awt.event.ComponentEvent) -> componentResized
+    void componentMoved(java.awt.event.ComponentEvent) -> componentMoved
+blingclock.digits.DigitPrefs -> eg:
+    blingclock.digits.DigitPrefs INSTANCE -> a
+    blingclock.digits.DigitPrefs getInstance() -> a
+    void setInstance(blingclock.digits.DigitPrefs) -> a
+    boolean getShow24Clock() -> a
+    boolean isRegistered() -> c
+    boolean getHideHourDigitsIfPossible() -> b
+    boolean isTrialMode() -> d
+blingclock.digits.DigitPrefs$1 -> ge:
+blingclock.digits.DigitPrefs$NullDigitPrefs -> y:
+    boolean getShow24Clock() -> a
+    boolean getHideHourDigitsIfPossible() -> b
+    boolean isRegistered() -> c
+    boolean isTrialMode() -> d
+blingclock.digits.DigitStyling -> eL:
+    java.awt.Color DIGIT_ON -> a
+    java.awt.Color DIGIT_ON_GLOW -> b
+    java.awt.Color DIGIT_OFF -> c
+    java.awt.Color DIGIT_OFF2 -> d
+    java.awt.Color DIGIT_OFF3 -> e
+    java.awt.Color DIGIT_OFF4 -> f
+    java.awt.Color GREY0 -> g
+    java.awt.Color GREY2 -> h
+    java.awt.Color GREY3 -> i
+    java.lang.String FONT -> a
+    java.awt.Color BAR_LED0 -> j
+    java.awt.Color BAR_LED1 -> k
+    java.awt.Color BAR_LED2 -> l
+    java.awt.Color BAR_HIGHLIGHT -> m
+    java.awt.Color BAR_GRAYED -> n
+    java.awt.Color BAR_COLOUR -> o
+    int[] B_COLOUR_BASE -> a
+    int[] B_COLOUR_FRAC -> b
+    java.awt.Color getBarFadeColour(double) -> a
+    java.awt.Color darkenColor(java.awt.Color,double) -> a
+blingclock.digits.DigitsPanel -> cK:
+    java.awt.GridBagLayout layout -> a
+    int lastDays -> a
+    boolean lastHourGreaterThanZero -> b
+    java.lang.String daysAsString -> a
+    blingclock.digits.LEDDigit[] dayDigits -> a
+    blingclock.digits.LEDDigit s1 -> a
+    blingclock.digits.LEDDigit s2 -> b
+    blingclock.digits.LEDDigit m1 -> c
+    blingclock.digits.LEDDigit m2 -> d
+    blingclock.digits.LEDDigit h1 -> e
+    blingclock.digits.LEDDigit h2 -> f
+    blingclock.digits.DecimalDigitPanel decimalPanel -> a
+    boolean showDecimals -> c
+    blingclock.digits.LEDSeparator sep1 -> a
+    blingclock.digits.LEDSeparator sep2 -> b
+    blingclock.digits.LEDSeparator daySep -> c
+    int digitCols -> b
+    blingclock.digits.DigitsPanelLabelPanel topLabel -> a
+    javax.swing.Timer separatorTimer -> a
+    javax.swing.Timer blinkTimer -> b
+    boolean slowMode -> d
+    boolean titleVisible -> a
+    boolean paintjamMode -> e
+    javax.swing.JPanel topFiller -> a
+    javax.swing.JPanel bottomFiller -> b
+    javax.swing.JPanel leftFiller -> c
+    javax.swing.JPanel rightFiller -> d
+    blingclock.digits.DigitDecorationPanel aboveDigitsPanel -> a
+    blingclock.digits.DigitDecorationPanel belowDigitsPanel -> b
+    double MIN_RATIO -> a
+    double MAX_RATIO -> b
+    int trimx -> c
+    int trimy -> d
+    boolean currentSeparatorBlink -> f
+    boolean currentBlink -> g
+    countdowntimer.NewCountdownFrame2 delegate$7378a6fb -> a
+    boolean isAtLeastAnHour -> h
+    boolean showRegistered -> i
+    int deferBlinkOff -> e
+    void setShowDecimals(boolean) -> a
+    void setAllowPlusMinus(boolean) -> b
+    void setPreserveDigitsRatio(boolean) -> c
+    void invalidate() -> invalidate
+    void init() -> j
+    void recalculateLayout() -> a
+    void setShowRegistered(boolean) -> d
+    void updateTitleLabelAndMetrics() -> k
+    void setTitleVisible(boolean) -> e
+    void setPaintjamMode(boolean) -> f
+    void setFreeRatio(boolean) -> g
+    void setupLayout() -> l
+    void relayout() -> b
+    void relayoutDigits(int) -> a
+    void startSeparatorBlink() -> c
+    void stopSeparatorBlink() -> d
+    void startDigitBlink() -> e
+    void startSlowDigitBlink() -> f
+    void stopDigitBlink() -> g
+    void createBlinkers() -> m
+    void onSeparatorTimer() -> h
+    void onBlinkTimer() -> i
+    java.awt.GridBagConstraints getTopGBC() -> a
+    java.awt.GridBagConstraints getSeparatorGBC(int) -> a
+    java.awt.GridBagConstraints getDaySeparatorGBC(int) -> b
+    java.awt.GridBagConstraints getDigitGBC(int) -> c
+    java.awt.GridBagConstraints getDecimalGBC(int) -> d
+    java.awt.GridBagConstraints getVerticalFillerGBC() -> b
+    java.awt.GridBagConstraints getTopFillerGBC() -> c
+    java.awt.GridBagConstraints getBelowDigitsGBC(int) -> e
+    java.awt.GridBagConstraints getAboveDigitsGBC(int) -> f
+    java.awt.GridBagConstraints getBottomFillerGBC() -> d
+    void setCounter(int,long,long,boolean) -> a
+    void access$000(blingclock.digits.DigitsPanel) -> a
+    boolean access$102(blingclock.digits.DigitsPanel,boolean) -> a
+blingclock.digits.DigitsPanel$1 -> eO:
+    blingclock.digits.DigitsPanel this$0 -> a
+    void componentResized(java.awt.event.ComponentEvent) -> componentResized
+blingclock.digits.DigitsPanel$2 -> eW:
+    blingclock.digits.DigitsPanel this$0 -> a
+    void run() -> run
+blingclock.digits.DigitsPanel$3 -> eZ:
+    blingclock.digits.DigitsPanel this$0 -> a
+    void run() -> run
+blingclock.digits.DigitsPanel$4 -> eS:
+    blingclock.digits.DigitsPanel this$0 -> a
+    void run() -> run
+blingclock.digits.DigitsPanel$5 -> eU:
+    blingclock.digits.DigitsPanel this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+blingclock.digits.DigitsPanel$6 -> S:
+    blingclock.digits.DigitsPanel this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+blingclock.digits.DigitsPanelLabelPanel -> bh:
+    java.lang.String DAYS_LABEL -> a
+    java.lang.String HOURS_LABEL -> b
+    java.lang.String MINUTES_LABEL -> c
+    java.lang.String SECONDS_LABEL -> d
+    int dayx1 -> a
+    int dayx2 -> b
+    int dayCx -> c
+    int hourx1 -> d
+    int hourx2 -> e
+    int hourCx -> f
+    int minutex1 -> g
+    int minutex2 -> h
+    int minuteCx -> i
+    int secx1 -> j
+    int secx2 -> k
+    int secCx -> l
+    boolean mouseInArea -> b
+    java.util.Map areas -> a
+    java.lang.String currentMouseOver -> e
+    blingclock.controls.ButtonHeldTimerCallbacks heldCallbacks -> a
+    countdowntimer.NewCountdownFrame2 delegate$7378a6fb -> a
+    boolean titleVisible -> c
+    boolean dontShowBecauseNotRegistered -> d
+    float registeredOnlyCounter -> a
+    boolean showingUnregisteredAtStartup -> e
+    boolean allowPlusMinus -> a
+    javax.swing.Timer fadingTimer -> a
+    float widgetAlpha -> b
+    void onFadeWidgets() -> a
+    void setTitleVisible(boolean) -> a
+    void onMouseClicked() -> b
+    void showRegisteredOnlyLabels() -> c
+    void onMouseMoved(int,int) -> a
+    void onAreaUnderMouse$6985f643(java.lang.String) -> a
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    void drawText(java.awt.Graphics2D,java.awt.Font,java.lang.String,float,boolean) -> a
+    void drawEndWidgets(java.awt.Graphics2D,java.awt.Font,java.lang.String,java.lang.String,float) -> a
+    void setDayStart(int) -> a
+    void setDayEnd(int) -> b
+    void setHourStart(int) -> c
+    void setHourEnd(int) -> d
+    void setMinuteStart(int) -> e
+    void setMinuteEnd(int) -> f
+    void setSecondStart(int) -> g
+    void setSecondEnd(int) -> h
+    void computeCenters() -> d
+    boolean access$002(blingclock.digits.DigitsPanelLabelPanel,boolean) -> a
+    javax.swing.Timer access$100(blingclock.digits.DigitsPanelLabelPanel) -> a
+    blingclock.controls.ButtonHeldTimerCallbacks access$200(blingclock.digits.DigitsPanelLabelPanel) -> a
+    float access$300(blingclock.digits.DigitsPanelLabelPanel) -> a
+    float access$318(blingclock.digits.DigitsPanelLabelPanel,double) -> a
+    float access$302(blingclock.digits.DigitsPanelLabelPanel,float) -> a
+    boolean access$402(blingclock.digits.DigitsPanelLabelPanel,boolean) -> b
+blingclock.digits.DigitsPanelLabelPanel$1 -> w:
+    blingclock.digits.DigitsPanelLabelPanel this$0 -> a
+    void mouseClicked(java.awt.event.MouseEvent) -> mouseClicked
+    void mouseEntered(java.awt.event.MouseEvent) -> mouseEntered
+    void mouseExited(java.awt.event.MouseEvent) -> mouseExited
+    void mousePressed(java.awt.event.MouseEvent) -> mousePressed
+    void mouseReleased(java.awt.event.MouseEvent) -> mouseReleased
+blingclock.digits.DigitsPanelLabelPanel$2 -> k:
+    blingclock.digits.DigitsPanelLabelPanel this$0 -> a
+    void mouseDragged(java.awt.event.MouseEvent) -> mouseDragged
+    void mouseMoved(java.awt.event.MouseEvent) -> mouseMoved
+blingclock.digits.DigitsPanelLabelPanel$3 -> l:
+    blingclock.digits.DigitsPanelLabelPanel this$0 -> a
+    void onClicked() -> a
+blingclock.digits.DigitsPanelLabelPanel$4 -> m:
+    blingclock.digits.DigitsPanelLabelPanel this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+blingclock.digits.DigitsPanelLabelPanel$5 -> o:
+    blingclock.digits.DigitsPanelLabelPanel this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+blingclock.digits.LEDDigit -> aG:
+    java.lang.String digit -> a
+    boolean showDigitNoBlink -> a
+    boolean[] elements -> a
+    int w -> a
+    int h -> b
+    int xx -> c
+    int yy -> d
+    int h2 -> e
+    boolean showPM -> b
+    boolean showAM -> c
+    boolean showRegistered -> d
+    java.util.Map charMap -> a
+    blingclock.controls.FastBlurFilter blurFilter1 -> a
+    blingclock.controls.FastBlurFilter blurFilter2 -> b
+    void repaint() -> repaint
+    void setShowRegistered(boolean) -> a
+    void showPM(boolean) -> b
+    void showAM(boolean) -> c
+    void setCharacter(java.lang.String) -> a
+    void setBlink(boolean) -> d
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    void drawTopLeft(java.awt.Graphics2D,java.lang.String,int) -> a
+    void drawSegment1(java.awt.Graphics2D) -> a
+    void drawSegment2(java.awt.Graphics2D) -> b
+    void drawSegment3(java.awt.Graphics2D) -> c
+    void drawSegment4(java.awt.Graphics2D) -> d
+    void drawSegment5(java.awt.Graphics2D) -> e
+    void drawSegment6(java.awt.Graphics2D) -> f
+    void drawSegment7(java.awt.Graphics2D) -> g
+    void drawHorizonontalSegment(java.awt.Graphics2D,int,int,int) -> a
+    void drawVerticalSegment(java.awt.Graphics2D,int,int,int,int) -> a
+blingclock.digits.LEDSeparator -> dH:
+    java.awt.RenderingHints renderHints -> a
+    blingclock.controls.FastBlurFilter blurFilter1 -> a
+    blingclock.controls.FastBlurFilter blurFilter2 -> b
+    java.awt.image.BufferedImage bufferedDot -> a
+    int bufferedW -> a
+    int bufferedH -> b
+    boolean on -> a
+    boolean blink -> b
+    boolean forDay -> c
+    boolean showRegistered -> d
+    void repaint() -> repaint
+    void setShowRegistered(boolean) -> a
+    void setOn(boolean) -> b
+    void setBlink(boolean) -> c
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    void drawDots(int,int,int,int,java.awt.Graphics2D) -> a
+blingclock.digits.Messages -> av:
+    java.util.ResourceBundle RESOURCE_BUNDLE -> a
+    java.lang.String getString(java.lang.String) -> a
+blingclock.digits.SpeedupGlowButtonAdapter -> fA:
+    long speedUp -> a
+    long rampUp -> b
+    void onStartHeldForPeriod() -> b
+    void onStopHeldForPeriod() -> d
+    void onHeldTick() -> c
+blingclock.layout.BlingAttachment -> c:
+    int percent -> a
+    int offset -> b
+    javax.swing.JComponent component -> a
+    blingclock.layout.BlingAttachmentSide side -> a
+    int compute(int,blingclock.layout.BlingLayout) -> a
+blingclock.layout.BlingAttachmentSide -> eM:
+    blingclock.layout.BlingAttachmentSide TOP -> a
+    blingclock.layout.BlingAttachmentSide BOTTOM -> b
+    blingclock.layout.BlingAttachmentSide LEFT -> c
+    blingclock.layout.BlingAttachmentSide RIGHT -> d
+    blingclock.layout.BlingAttachmentSide[] $VALUES -> a
+    blingclock.layout.BlingAttachmentSide[] values() -> values
+    blingclock.layout.BlingAttachmentSide valueOf(java.lang.String) -> valueOf
+blingclock.layout.BlingLayout -> aa:
+    java.util.Set components -> a
+    java.util.Map layouts -> a
+    void addLayoutComponent(java.lang.String,java.awt.Component) -> addLayoutComponent
+    void addLayoutComponent(java.awt.Component,java.lang.Object) -> addLayoutComponent
+    void removeLayoutComponent(java.awt.Component) -> removeLayoutComponent
+    float getLayoutAlignmentX(java.awt.Container) -> getLayoutAlignmentX
+    float getLayoutAlignmentY(java.awt.Container) -> getLayoutAlignmentY
+    void invalidateLayout(java.awt.Container) -> invalidateLayout
+    void layoutContainer(java.awt.Container) -> layoutContainer
+    java.awt.Dimension minimumLayoutSize(java.awt.Container) -> minimumLayoutSize
+    java.awt.Dimension preferredLayoutSize(java.awt.Container) -> preferredLayoutSize
+    java.awt.Dimension maximumLayoutSize(java.awt.Container) -> maximumLayoutSize
+    blingclock.layout.BlingLayoutData layoutFor(javax.swing.JComponent) -> a
+blingclock.layout.BlingLayoutData -> fJ:
+    blingclock.layout.BlingAttachment top -> a
+    blingclock.layout.BlingAttachment left -> b
+    blingclock.layout.BlingAttachment right -> c
+    blingclock.layout.BlingAttachment bottom -> d
+    blingclock.layout.BlingLayoutData setTop(int) -> a
+    blingclock.layout.BlingLayoutData setLeft(int) -> b
+    blingclock.layout.BlingLayoutData setRight(int) -> c
+    blingclock.layout.BlingLayoutData setBottom(int) -> d
+    blingclock.layout.BlingLayoutData setTop(int,int) -> a
+    blingclock.layout.BlingLayoutData setLeft(int,int) -> b
+    blingclock.layout.BlingLayoutData setRight(int,int) -> c
+    blingclock.layout.BlingLayoutData setBottom(int,int) -> d
+    blingclock.layout.BlingLayoutData setTop(javax.swing.JComponent,int,blingclock.layout.BlingAttachmentSide) -> a
+    blingclock.layout.BlingLayoutData setLeft(javax.swing.JComponent,int,blingclock.layout.BlingAttachmentSide) -> b
+    blingclock.layout.BlingLayoutData setRight(javax.swing.JComponent,int,blingclock.layout.BlingAttachmentSide) -> c
+    blingclock.layout.BlingLayoutData setBottom(javax.swing.JComponent,int,blingclock.layout.BlingAttachmentSide) -> d
+    blingclock.layout.BlingAttachment getAttachment(blingclock.layout.BlingAttachmentSide) -> a
+blingclock.layout.BlingLayoutData$1 -> cl:
+    int[] $SwitchMap$blingclock$layout$BlingAttachmentSide -> a
+blingclock.layout.MetricsSharing -> fp:
+    blingclock.layout.MetricsSharing instance -> a
+    java.util.List listeners -> a
+    java.util.Map metrics -> a
+    blingclock.layout.MetricsSharing getInstance() -> a
+    void addListener$1734fdff(countdowntimer.visualiser.SingleTimeBarVisualiserPanel) -> a
+    void setMetric(java.lang.String,double) -> a
+    double getMetric(java.lang.String) -> a
+blingclock.util.GlobalImageCache -> aw:
+    blingclock.util.GlobalImageCache INSTANCE -> a
+    java.util.Map cachedImages -> a
+    java.util.List keys -> a
+    boolean reaperStarted -> a
+    javax.swing.Timer reaperTimer -> a
+    boolean DEBUG -> b
+    blingclock.util.GlobalImageCache getInstance() -> a
+    java.awt.image.BufferedImage getImage(java.lang.String,int,int) -> a
+    void storeImage(java.lang.String,int,int,java.awt.image.BufferedImage) -> a
+    void startReaper() -> b
+    void clearCache() -> a
+    void reapUnusedImages() -> c
+    void access$000(blingclock.util.GlobalImageCache) -> a
+blingclock.util.GlobalImageCache$1 -> bO:
+    blingclock.util.GlobalImageCache this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+blingclock.util.GlobalImageCache$CachedImage -> cY:
+    long timestamp -> a
+    java.awt.image.BufferedImage image -> a
+    void recordUsed() -> a
+    boolean hasNotBeenReferencedRecently(long) -> a
+blingclock.util.GraphicsUtil -> bL:
+    java.awt.RenderingHints renderHints -> a
+    java.awt.RenderingHints textRenderHints -> b
+    java.awt.image.BufferedImage createCompatibleImage(int,int) -> a
+    java.awt.RenderingHints setupRenderHints() -> a
+    java.awt.RenderingHints setupTextRenderHints() -> b
+    java.awt.image.BufferedImage createTranslucentCompatibleImage(int,int) -> b
+    java.awt.GraphicsConfiguration getGraphicsConfiguration() -> a
+    java.awt.Graphics2D prepareGraphics(java.awt.Graphics) -> a
+    void setRenderHints(java.awt.Graphics2D) -> a
+    void setRenderHintsForTextOnly(java.awt.Graphics2D) -> b
+    void setPixels(java.awt.image.BufferedImage,int,int,int,int,int[]) -> a
+    int[] getPixels(java.awt.image.BufferedImage,int,int,int,int,int[]) -> a
+blingclock.util.MouseMovingListener -> eH:
+    void onMouseMoving() -> b
+    void onMouseStoppedMoving() -> a
+    void onMouseStopped3Seconds() -> c
+    void onMouseStopped6Seconds() -> d
+blingclock.util.MouseTrackingService -> ae:
+    blingclock.util.MouseTrackingService INSTANCE -> a
+    java.util.List myWindows -> a
+    java.util.List listeners -> b
+    javax.swing.Timer mouseTimer -> a
+    javax.swing.Timer mouseStoppedTimer -> b
+    int stopCount -> a
+    java.awt.Point lastMouseLocation -> a
+    boolean mouseMoving -> a
+    blingclock.util.MouseTrackingService getInstance() -> a
+    void addListener(blingclock.util.MouseMovingListener) -> a
+    void removeListener(blingclock.util.MouseMovingListener) -> b
+    boolean isMouseOverComponent(javax.swing.JComponent,int) -> a
+    void registerWindow(java.awt.Component) -> a
+    void start() -> c
+    void stop() -> d
+    void onTimerFired() -> a
+    boolean isMouseOverWindowICareAbout(java.awt.Point) -> a
+    java.awt.Point getMousePosition() -> a
+    void onStoppedTimerFired() -> b
+    void informMouseStopped(blingclock.util.MouseMovingListener) -> c
+    void informMouseMoving() -> e
+    void informMouseStoppedMoving() -> f
+blingclock.util.MouseTrackingService$1 -> G:
+    blingclock.util.MouseTrackingService this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+blingclock.util.MouseTrackingService$2 -> H:
+    blingclock.util.MouseTrackingService this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+blingclock.visualiser.SegmentUtils -> fx:
+    java.util.List possibleSegmentUnits -> a
+    void buildPossibleSegmentUnits() -> a
+    int getSegmentCount(long) -> a
+blingclock.visualiser.TimeBarVisualiserPanel -> dG:
+    long countDownSeconds -> a
+    int days -> a
+    long targetSeconds -> b
+    int targetRows -> b
+    long fraction -> c
+    int lightWidth -> c
+    int lightOffset -> d
+    int rowHeight -> e
+    int cw -> f
+    int ch -> g
+    int ix -> h
+    int topGap -> i
+    java.awt.image.BufferedImage lightImage -> a
+    boolean flash -> c
+    int mouseOverSecond -> j
+    java.awt.Font textFont -> a
+    int wholeHours -> k
+    int secondsBelowHourRemaining -> l
+    boolean trackMouse -> d
+    long lastRepaintDaySeconds -> d
+    int textCutoff -> m
+    int dayWidth -> n
+    int dayHeight -> o
+    int hoffset -> p
+    int voffset -> q
+    int dayGap -> r
+    int cachedW -> s
+    int cachedH -> t
+    void globalDisableMouseMonitoring() -> b
+    void globalEnableMouseMonitoring() -> c
+    void onMouseClicked(int,int) -> b
+    void onMouseMoved(int,int) -> c
+    void setCountdownTimeRemaining(int,long,long) -> a
+    void makeRepaintDamageForDays() -> d
+    void setTargetSeconds(long) -> a
+    void reset() -> a
+    void updateDisplay() -> e
+    void flash(boolean) -> a
+    void onSelected(int,int) -> a
+    void calcLightDimensions() -> f
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    java.awt.Rectangle calcLightRectangle(int,int) -> a
+    int getSecondsFromPos(int,int) -> a
+    void drawRow(java.awt.Graphics,java.awt.Rectangle,int) -> a
+    java.awt.image.BufferedImage createLightImage(int,int) -> a
+    void paintDays$2e2f7a5f(java.awt.Graphics) -> a
+    void drawHours$2e2f7a5f(java.awt.Graphics) -> b
+    void buildGraphicsHelpers(java.awt.Graphics2D,int,int) -> a
+    boolean access$000() -> a
+    int access$102(blingclock.visualiser.TimeBarVisualiserPanel,int) -> a
+blingclock.visualiser.TimeBarVisualiserPanel$1 -> cu:
+    blingclock.visualiser.TimeBarVisualiserPanel this$0 -> a
+    void mouseClicked(java.awt.event.MouseEvent) -> mouseClicked
+    void mouseExited(java.awt.event.MouseEvent) -> mouseExited
+blingclock.visualiser.TimeBarVisualiserPanel$2 -> cz:
+    blingclock.visualiser.TimeBarVisualiserPanel this$0 -> a
+    void mouseMoved(java.awt.event.MouseEvent) -> mouseMoved
+blingclock.visualiser.TimeSelectionListener -> cM:
+    void onSelected(int,int) -> a
+blingclock.visualiser.TimeVisualiser -> E:
+    void setCountdownTimeRemaining(int,long,long) -> a
+    void setTargetSeconds(long) -> a
+    void reset() -> a
+    void flash(boolean) -> a
+blingclock.visualiser.VisualiserPanel -> cI:
+    blingclock.visualiser.TimeSelectionListener listener -> a
+    boolean updating -> a
+    boolean showRegistered -> b
+    void setTicking(boolean) -> c
+    void setShowNeedsRegistered(boolean) -> b
+countdowntimer.Branding -> eA:
+    long MILLIS_PER_DAY -> a
+    java.lang.String localeDir -> a
+    int getCurrentVersion() -> a
+    java.lang.String getStoreUrl() -> a
+    java.lang.String getUpdateUrl() -> b
+    java.lang.String getStoreUrlBuyButton() -> c
+    java.lang.String getStoreUrlExpiredTrials() -> d
+    java.lang.String enrichUrl(java.lang.String) -> a
+    java.lang.String getRunCodeWhenInstalled() -> e
+    java.lang.String getTimeCode() -> f
+    java.util.List getNowCodesForDays(int) -> a
+    java.lang.String getCode(java.util.Date) -> a
+    java.lang.String getTimeCode(java.util.Date) -> b
+    java.lang.String getOsName() -> g
+    void setLocale(java.lang.String) -> a
+countdowntimer.CountdownKeyboardSupport -> W:
+    countdowntimer.KeyboardInputTarget focusCountdownWindow -> a
+    java.util.List myActions -> a
+    boolean enabled -> b
+    countdowntimer.CountdownKeyboardSupport INSTANCE -> a
+    long lastEnterSeen -> a
+    boolean acceptingInputMode -> a
+    countdowntimer.SettingTimePanel timePanel -> a
+    countdowntimer.CountdownKeyboardSupport getInstance() -> a
+    void registerListeners$75284869(javax.swing.JFrame) -> a
+    void enableKeyboardSupport() -> a
+    void disableKeyboardSupport() -> b
+    void lostFocus(countdowntimer.KeyboardInputTarget) -> a
+    void removeSpaceShortcut(java.awt.Component[]) -> a
+    void doStartTweakAction() -> c
+    void doCharTypedAction(char) -> a
+    void doKeyboardAction(java.lang.String) -> a
+    void doEnter() -> d
+    void processDigit(int) -> a
+    void closeTimePanel() -> e
+    void openDigitPanel() -> f
+    boolean access$000(countdowntimer.CountdownKeyboardSupport) -> a
+    countdowntimer.KeyboardInputTarget access$100(countdowntimer.CountdownKeyboardSupport) -> a
+    void access$200(countdowntimer.CountdownKeyboardSupport) -> a
+    java.util.List access$300(countdowntimer.CountdownKeyboardSupport) -> a
+countdowntimer.CountdownKeyboardSupport$1 -> eR:
+    countdowntimer.CountdownKeyboardSupport this$0 -> a
+    boolean dispatchKeyEvent(java.awt.event.KeyEvent) -> dispatchKeyEvent
+countdowntimer.CountdownKeyboardSupport$1$1 -> bA:
+    countdowntimer.CountdownKeyboardSupport$1 this$1 -> a
+    void run() -> run
+countdowntimer.CountdownKeyboardSupport$MyAction -> ah:
+    javax.swing.KeyStroke keyStroke -> a
+    java.lang.String actionName -> a
+    countdowntimer.CountdownKeyboardSupport this$0 -> a
+    void actionPerformed() -> a
+    javax.swing.KeyStroke access$400(countdowntimer.CountdownKeyboardSupport$MyAction) -> a
+countdowntimer.CountdownWindow -> di:
+    countdowntimer.timer.internal.CountdownTimerImpl countdownTimer$21b3c26e -> a
+    countdowntimer.preferences.TimerPreferenceImpl timerPreference$319e0941 -> a
+    float pausePlayButtonFade -> a
+    boolean fracEnabled -> a
+    boolean muted -> b
+    int layoutMode -> b
+    int VERSION -> c
+    boolean isFullscreen -> c
+    boolean isHideWindowDecorations -> d
+    countdowntimer.CountdownWindow restoreWindow -> a
+    boolean compactButtons -> e
+    boolean veryFirstRun -> f
+    countdowntimer.mini.WindowMover windowMover -> a
+    blingclock.controls.GlowButton closeButton -> t
+    blingclock.controls.GlowButton minButton -> u
+    blingclock.controls.GlowButton maxButton -> v
+    blingclock.controls.GlowButton resizeButton -> w
+    java.util.List fadingButtons -> a
+    countdowntimer.tweaks.TweakPanelControl tweakPanelControl -> a
+    int clickCount -> d
+    boolean pressed -> g
+    int startMoveX -> e
+    int startMoveY -> f
+    int startMoveWidth -> g
+    int startMoveHeight -> h
+    boolean hidingPointer -> h
+    java.awt.Cursor transparentCursor -> a
+    int lastLayout -> i
+    long lastHackResize -> a
+    int countdownLayoutMode -> j
+    countdowntimer.preferences.PrefsPanel prefsPanel -> a
+    countdowntimer.timer.gui.CurrentTimersPanel timersPanel -> a
+    boolean lastLayoutTitles -> i
+    void setupDragAndDrop() -> R
+    void storeFileAsCustomAlarm(java.io.File,java.lang.String) -> a
+    java.lang.String soundSuffix(java.io.File) -> a
+    void userJustRegistered() -> l
+    void setupFadingButtons() -> S
+    void setupHoverHelp() -> T
+    void showRegisteredUser() -> U
+    void setCountdownTimer$207a8713(countdowntimer.timer.internal.CountdownTimerImpl) -> a
+    void addOwnWindowDecorations() -> V
+    void sizeAndPositionWindowControls() -> W
+    void hookupResizeListeners(blingclock.controls.GlowButton) -> a
+    void addHideMouseSupport() -> X
+    void hideMousePointer() -> Y
+    void unhideMousePointer() -> Z
+    void onCurrentVersionIs(java.lang.String) -> a
+    void onWindowResized() -> m
+    void ensureMinimumSize() -> aa
+    java.awt.Dimension getMinimumDesiredSize() -> a
+    void onWindowMoved() -> n
+    void rememberThisPosition() -> ab
+    void fadeInButtons() -> o
+    void fadeOutButtons() -> p
+    void fadeButtonConditionally(boolean,blingclock.controls.GlowButton,boolean) -> a
+    void setMuteButton() -> ac
+    void setFracButton() -> ad
+    void setSubmodeButton() -> ae
+    void setTopButton() -> af
+    void setTimeModeDisplay() -> ag
+    void start() -> q
+    void keyboardPausePlay() -> r
+    void onPlayButtonPressed() -> s
+    void onPauseButtonPressed() -> t
+    void onMinusButtonPressed() -> u
+    void onPlusButtonPressed() -> v
+    void addTimeToClock(int) -> a
+    void takeTimeFromClock(int) -> b
+    void onDayMinusClicked() -> a
+    void onDayPlusClicked() -> b
+    void onHourMinusClicked() -> c
+    void onHourPlusClicked() -> d
+    void onMinuteMinusClicked() -> e
+    void onMinutePlusClicked() -> f
+    void onSecondMinusClicked() -> g
+    void onSecondPlusClicked() -> h
+    void onFullButtonPressed() -> w
+    void restoreFromFullscreen() -> ah
+    void onBuyButtonPressed() -> x
+    void repaintLater(java.awt.Component,boolean) -> a
+    boolean didJustForceResize() -> b
+    void onSelected(int,int) -> a
+    void displayMiniMessage(java.lang.String) -> c
+    void displayNotRegisteredAndInTrialMode() -> y
+    void keyboardReset() -> z
+    void onResetButtonPressed() -> A
+    void updateTimerPanelTime() -> ai
+    void setBlinkingForSeparatorsInTimeMode() -> aj
+    void onTopButtonPressed() -> B
+    void onPrefButtonPressed() -> C
+    void onMuteButtonPressed() -> D
+    void onSubmodeButtonPressed() -> E
+    void onTimeModeButtonPressed() -> F
+    void playTimeSound() -> ak
+    void playSmallClick() -> al
+    void onFracButtonPressed() -> G
+    void onMiniButtonPressed() -> H
+    void keyboardVisualiseLeft() -> I
+    void keyboardVisualiseRight() -> J
+    void keyboardRestoreWindowPosition() -> K
+    void onChangeVisualisationButtonPressed(boolean) -> a
+    void flashupLayoutMode() -> am
+    void doLayoutChanged() -> an
+    void onCompactButtonPressed() -> L
+    void onRemoveTitleButtonPressed() -> M
+    void onTweakButtonPressed() -> N
+    java.awt.Point getMouseLocationInFrame() -> a
+    void reopenWindowAdjustingDecorations(boolean) -> b
+    void adjustLayout() -> ao
+    void setDisplayRegisteredFeature(boolean) -> c
+    void openPrefsPanel() -> ap
+    void disableHoverHelp() -> aq
+    void enableHoverHelp() -> ar
+    void closePrefsAndTimerPanel() -> as
+    void resizePrefsPanel() -> at
+    void resizeCurrentTimersPanel() -> au
+    void visualiseTimeLeft() -> av
+    void onCountdownReachedZero() -> i
+    void onCountdownZeroRestartingLoop() -> j
+    void onCountdownReachedZeroEnteringOverrun() -> k
+    void bringWindowToFront() -> aw
+    void onTick(int,long,long) -> a
+    void playCustomAlarmSound() -> ax
+    void playAudioClip(java.lang.String,int,int,boolean) -> a
+    java.net.URL getSoundUrl(java.lang.String) -> a
+    void onPreferencesChanged() -> b_
+    void restoring() -> O
+    void applyTime(int,int,int,int) -> a
+    boolean isTimeMode() -> a
+    java.awt.Rectangle getDigitsPanelBounds() -> a
+    javax.swing.JLayeredPane getTheLayeredPane() -> a
+    void timePanelClosed() -> P
+    void timePanelOpen() -> Q
+    void applyEnteredTweak(java.lang.String) -> b
+    int access$008(countdowntimer.CountdownWindow) -> a
+    void access$100(countdowntimer.CountdownWindow) -> a
+    void access$200(countdowntimer.CountdownWindow) -> b
+    java.lang.String access$300(countdowntimer.CountdownWindow,java.io.File) -> a
+    void access$400(countdowntimer.CountdownWindow) -> c
+    boolean access$502(countdowntimer.CountdownWindow,boolean) -> a
+    int access$602(countdowntimer.CountdownWindow,int) -> a
+    int access$702(countdowntimer.CountdownWindow,int) -> b
+    int access$802(countdowntimer.CountdownWindow,int) -> c
+    int access$902(countdowntimer.CountdownWindow,int) -> d
+    boolean access$500(countdowntimer.CountdownWindow) -> a
+    int access$600(countdowntimer.CountdownWindow) -> b
+    int access$700(countdowntimer.CountdownWindow) -> c
+    int access$800(countdowntimer.CountdownWindow) -> d
+    int access$900(countdowntimer.CountdownWindow) -> e
+    java.awt.Dimension access$1000(countdowntimer.CountdownWindow) -> a
+    long access$1102(countdowntimer.CountdownWindow,long) -> a
+    countdowntimer.preferences.PrefsPanel access$1200(countdowntimer.CountdownWindow) -> a
+    countdowntimer.timer.gui.CurrentTimersPanel access$1300(countdowntimer.CountdownWindow) -> a
+    void access$1500(countdowntimer.CountdownWindow) -> d
+    void access$1600(countdowntimer.CountdownWindow,java.lang.String,int,int,boolean) -> a
+    countdowntimer.timer.internal.CountdownTimerImpl access$1700$7f1aa176(countdowntimer.CountdownWindow) -> a
+    int access$000(countdowntimer.CountdownWindow) -> f
+countdowntimer.CountdownWindow$1 -> fj:
+    countdowntimer.CountdownWindow this$0 -> a
+    void mousePressed(java.awt.event.MouseEvent) -> mousePressed
+countdowntimer.CountdownWindow$10 -> ei:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$11 -> eb:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$12 -> ed:
+    blingclock.controls.GlowButton val$button -> a
+    countdowntimer.CountdownWindow this$0 -> a
+    void mousePressed(java.awt.event.MouseEvent) -> mousePressed
+    void mouseReleased(java.awt.event.MouseEvent) -> mouseReleased
+    void mouseExited(java.awt.event.MouseEvent) -> mouseExited
+countdowntimer.CountdownWindow$13 -> ep:
+    blingclock.controls.GlowButton val$button -> a
+    countdowntimer.CountdownWindow this$0 -> a
+    void mouseDragged(java.awt.event.MouseEvent) -> mouseDragged
+    void mouseMoved(java.awt.event.MouseEvent) -> mouseMoved
+countdowntimer.CountdownWindow$14 -> er:
+    countdowntimer.CountdownWindow this$0 -> a
+    void onClicked() -> a
+countdowntimer.CountdownWindow$15 -> et:
+    countdowntimer.CountdownWindow this$0 -> a
+    void onClicked() -> a
+countdowntimer.CountdownWindow$16 -> ev:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$17 -> ew:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$18 -> ey:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$19 -> ez:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$2 -> fa:
+    countdowntimer.CountdownWindow this$0 -> a
+    void onMouseMoving() -> b
+    void onMouseStopped3Seconds() -> c
+    void onMouseStopped6Seconds() -> d
+countdowntimer.CountdownWindow$20 -> eD:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$21 -> eC:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$22 -> eF:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$23 -> eE:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$24 -> fe:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$25 -> fg:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$26 -> fb:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$27 -> fc:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$28 -> fi:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$29 -> fk:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$3 -> fd:
+    countdowntimer.CountdownWindow this$0 -> a
+    void componentResized(java.awt.event.ComponentEvent) -> componentResized
+    void componentMoved(java.awt.event.ComponentEvent) -> componentMoved
+countdowntimer.CountdownWindow$30 -> fn:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$31 -> fu:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$32 -> ft:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$33 -> fr:
+    boolean val$tweak -> a
+    java.awt.Component val$c -> a
+    countdowntimer.CountdownWindow this$0 -> a
+    void run() -> run
+countdowntimer.CountdownWindow$33$1 -> p:
+    java.awt.Dimension[] val$d -> a
+    countdowntimer.CountdownWindow$33 this$1 -> a
+    void run() -> run
+countdowntimer.CountdownWindow$33$2 -> q:
+    java.awt.Dimension[] val$d -> a
+    countdowntimer.CountdownWindow$33 this$1 -> a
+    void run() -> run
+countdowntimer.CountdownWindow$33$3 -> s:
+    countdowntimer.CountdownWindow$33 this$1 -> a
+    void run() -> run
+countdowntimer.CountdownWindow$34 -> fq:
+    int px -> b
+    int py -> c
+    int pw -> d
+    int ph -> e
+    int dx -> f
+    int dy -> g
+    int dw -> h
+    int dh -> i
+    int val$w -> a
+    countdowntimer.CountdownWindow this$0 -> a
+    void begin() -> a
+    void end() -> b
+    void timingEvent(float) -> a
+countdowntimer.CountdownWindow$35 -> fI:
+    int px -> c
+    int py -> d
+    int pw -> e
+    int ph -> f
+    int dx -> g
+    int dy -> h
+    int dw -> i
+    int dh -> j
+    int val$w -> a
+    int val$h -> b
+    countdowntimer.CountdownWindow this$0 -> a
+    void begin() -> a
+    void end() -> b
+    void timingEvent(float) -> a
+countdowntimer.CountdownWindow$36 -> fK:
+    int d -> a
+    countdowntimer.CountdownWindow this$0 -> a
+    void run() -> b
+countdowntimer.CountdownWindow$37 -> fL:
+    int[] $SwitchMap$countdowntimer$timer$internal$SubMode -> a
+countdowntimer.CountdownWindow$4 -> ff:
+    countdowntimer.CountdownWindow this$0 -> a
+    void windowGainedFocus(java.awt.event.WindowEvent) -> windowGainedFocus
+    void windowLostFocus(java.awt.event.WindowEvent) -> windowLostFocus
+countdowntimer.CountdownWindow$5 -> fh:
+    countdowntimer.CountdownWindow this$0 -> a
+    void onCurrentVersion(java.lang.String) -> a
+countdowntimer.CountdownWindow$6 -> eQ:
+    countdowntimer.CountdownWindow this$0 -> a
+    void onRegistrationStatusChanged() -> a
+countdowntimer.CountdownWindow$6$1 -> T:
+    countdowntimer.CountdownWindow$6 this$1 -> a
+    void run() -> run
+countdowntimer.CountdownWindow$7 -> eT:
+    countdowntimer.CountdownWindow this$0 -> a
+    void onDropped(java.util.List) -> a
+    void onDropFinished() -> a
+    void onDropEnter() -> b
+countdowntimer.CountdownWindow$8 -> eV:
+    countdowntimer.CountdownWindow this$0 -> a
+    void run() -> run
+countdowntimer.CountdownWindow$9 -> eY:
+    countdowntimer.CountdownWindow this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.CountdownWindow$AlarmThread -> F:
+    countdowntimer.CountdownWindow this$0 -> a
+    void run() -> run
+countdowntimer.Features -> du:
+    countdowntimer.Features INSTANCE -> a
+    boolean isCheckForUpdatesSupported() -> a
+    boolean isPrefsEnabled() -> b
+    boolean isOnTopEnabled() -> c
+    boolean isMuteButtonEnabled() -> d
+    boolean isShowHideButtonEnabled() -> e
+    boolean fadePlayPauseButtonsWhenMouseStationary() -> f
+    boolean isFullViewAvailable() -> g
+countdowntimer.FullScreenUtil -> aJ:
+    boolean usedfullscreenApi -> a
+    boolean isWindows() -> a
+    boolean isOSX() -> b
+    void fullScreenIfPossible(javax.swing.JFrame) -> a
+    void fullScreenWithAPI(javax.swing.JFrame) -> b
+    void fullScreenUsingMaximise(javax.swing.JFrame) -> c
+    void unFullScreen() -> a
+countdowntimer.KeyboardInputTarget -> fz:
+    void keyboardVisualiseLeft() -> I
+    void keyboardVisualiseRight() -> J
+    void onMinusButtonPressed() -> u
+    void onPlusButtonPressed() -> v
+    void keyboardPausePlay() -> r
+    boolean isTimeMode() -> a
+    void displayNotRegisteredAndInTrialMode() -> y
+    void keyboardReset() -> z
+    javax.swing.JLayeredPane getTheLayeredPane() -> a
+    java.awt.Rectangle getDigitsPanelBounds() -> a
+    void applyTime(int,int,int,int) -> a
+    void timePanelClosed() -> P
+    void timePanelOpen() -> Q
+    void applyEnteredTweak(java.lang.String) -> b
+    void keyboardRestoreWindowPosition() -> K
+countdowntimer.LayoutUtil -> be:
+    blingclock.controls.GlowButton muteButton -> b
+    blingclock.controls.GlowButton fracButton -> c
+    blingclock.controls.GlowButton subModeButton -> d
+    blingclock.controls.GlowButton tweakButton -> a
+    blingclock.controls.GlowButton timeModeButton -> e
+    blingclock.controls.GlowButton onTopButton -> f
+    blingclock.controls.GlowButton prefsButton -> g
+    blingclock.controls.GlowButton visualiseButton -> h
+    blingclock.controls.GlowButton miniButton -> i
+    blingclock.controls.GlowButton fullButton -> j
+    blingclock.controls.GlowButton compactButton -> k
+    blingclock.controls.GlowButton removeTitlebarButton -> l
+    blingclock.controls.GlowButton buyButton -> m
+    blingclock.controls.GlowButton pauseButton -> n
+    blingclock.controls.GlowButton playButton -> o
+    blingclock.controls.GlowButton resetButton -> p
+    blingclock.controls.GlowButton filler -> q
+    blingclock.controls.GlowButton filler2 -> r
+    void setControlButtons(blingclock.controls.GlowButton,blingclock.controls.GlowButton,blingclock.controls.GlowButton) -> a
+    void setOptionsButtons(blingclock.controls.GlowButton,blingclock.controls.GlowButton,blingclock.controls.GlowButton,blingclock.controls.GlowButton,blingclock.controls.GlowButton) -> a
+    void setModeButtons(blingclock.controls.GlowButton,blingclock.controls.GlowButton,blingclock.controls.GlowButton,blingclock.controls.GlowButton,blingclock.controls.GlowButton,blingclock.controls.GlowButton,blingclock.controls.GlowButton,blingclock.controls.GlowButton) -> a
+    void layoutOptionsPanel(javax.swing.JPanel,boolean) -> a
+    void layoutBelowDigitsPanel(blingclock.digits.DigitDecorationPanel,boolean) -> a
+    void layoutModePanel(javax.swing.JPanel,boolean) -> b
+    void layoutAboveDigitsPanel(blingclock.digits.DigitDecorationPanel,boolean) -> b
+countdowntimer.Main -> countdowntimer.Main:
+    void main(java.lang.String[]) -> main
+    void setMyLocale(java.lang.String) -> a
+countdowntimer.Main$1 -> aD:
+    boolean getShow24Clock() -> a
+    boolean isRegistered() -> c
+    boolean getHideHourDigitsIfPossible() -> b
+    boolean isTrialMode() -> d
+countdowntimer.Main$2 -> aE:
+    void run() -> run
+countdowntimer.Messages -> fD:
+    java.util.ResourceBundle RESOURCE_BUNDLE -> a
+    java.lang.String getString(java.lang.String) -> a
+countdowntimer.NewCountdownFrame2 -> n:
+    blingclock.controls.GlowButton muteButton -> a
+    blingclock.controls.GlowButton onTopButton -> b
+    blingclock.controls.GlowButton subModeButton -> c
+    blingclock.controls.GlowButton tweakButton -> d
+    blingclock.controls.GlowButton timeModeButton -> e
+    blingclock.controls.GlowButton fracButton -> f
+    blingclock.controls.GlowButton prefsButton -> g
+    blingclock.controls.GlowButton visualiseButton -> h
+    blingclock.controls.GlowButton miniButton -> i
+    blingclock.controls.GlowButton fullButton -> j
+    blingclock.controls.GlowButton compactButton -> k
+    blingclock.controls.GlowButton buyButton -> l
+    blingclock.controls.GlowButton removeTitleButton -> m
+    blingclock.controls.GlowButton debugButton1 -> n
+    blingclock.controls.GlowButton playButton -> o
+    blingclock.controls.GlowButton pauseButton -> p
+    blingclock.controls.GlowButton minusButton -> q
+    blingclock.controls.GlowButton plusButton -> r
+    blingclock.controls.GlowButton resetButton -> s
+    countdowntimer.visualiser.SwitchableTimerPanel bottomTimerPanel -> a
+    countdowntimer.visualiser.SwitchableTimerPanel topTimerPanel -> b
+    blingclock.digits.DigitsPanel digitsPanel -> a
+    javax.swing.JPanel optionsButtonPanel -> a
+    javax.swing.JPanel modeButtonPanel -> b
+    javax.swing.JPanel playPausePanel -> c
+    blingclock.controls.HQJLabel titleLabel -> a
+    blingclock.layout.BlingLayout layout -> a
+    boolean fullScreenMode -> a
+    countdowntimer.LayoutUtil layoutUtil -> a
+    int timerInstance -> a
+    void initComponents() -> i
+    void onDayMinusClicked() -> a
+    void onDayPlusClicked() -> b
+    void onHourMinusClicked() -> c
+    void onHourPlusClicked() -> d
+    void onMinuteMinusClicked() -> e
+    void onMinutePlusClicked() -> f
+    void onSecondMinusClicked() -> g
+    void onSecondPlusClicked() -> h
+countdowntimer.SecondsConverter -> cd:
+    java.lang.String secondsToHHMM(long) -> a
+countdowntimer.SettingTimePanel -> fQ:
+    int myAlpha -> a
+    java.lang.String rawDigits -> a
+    java.lang.String formattedDigits -> b
+    javax.swing.Timer timer -> a
+    boolean blink -> a
+    void blink() -> a
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    void appendDigit(int) -> a
+    void appendCharacter(char) -> a
+    void deleteDigit() -> b
+    void applyTime(countdowntimer.KeyboardInputTarget) -> a
+    int parseNum(java.lang.String,int) -> a
+    java.lang.String formatDigits() -> a
+    boolean hasPendingDigits() -> a
+countdowntimer.SettingTimePanel$1 -> em:
+    countdowntimer.SettingTimePanel this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.Styling -> ab:
+    java.awt.Color onColour -> f
+    java.awt.Color offColour -> g
+    java.awt.Color buttonColour -> h
+    java.awt.Color leftButtonColour -> i
+    java.awt.Color leftButtonColour2 -> j
+    java.util.Set onColourSet -> a
+    java.util.Set offColourSet -> b
+    java.util.Set buttonColourSet -> c
+    java.util.Set leftButtonColourSet -> d
+    java.util.Set leftButtonColour2Set -> e
+    java.awt.Color CIRCLE_COLOUR -> a
+    java.awt.Color CIRCLE_HIGHLIGHT_COLOUR -> b
+    java.awt.Color GREY1 -> c
+    java.awt.Color GREY2 -> d
+    java.awt.Color GREY3 -> e
+    java.lang.String FONT -> a
+    void hotApplyTheme(countdowntimer.tweaks.TweakValue,float) -> a
+    void applyTheme(countdowntimer.tweaks.TweakValue,float) -> b
+    void makeOnButtonColour(javax.swing.JComponent) -> a
+    void makeOffButtonColour(javax.swing.JComponent) -> b
+    void makeLeftButtonColour(javax.swing.JComponent) -> c
+    void makeLeftButtonColour2(javax.swing.JComponent) -> d
+    void setButtonColour(javax.swing.JComponent) -> e
+    void applyColours() -> a
+    void buildDigitsColours(int,int,int,float) -> a
+    void buildBarColours(int,int,int) -> a
+    void buildCircleColours(int,int,int) -> b
+    java.awt.Color makeColor(int,int,int,double) -> a
+countdowntimer.controls.FadablePanel -> aF:
+    void setAlpha(float) -> a
+    void fade(java.awt.Component,float) -> a
+countdowntimer.controls.FadeMessagePanel -> dl:
+    blingclock.controls.HQJLabel messageLabel -> a
+    javax.swing.Timer timer -> a
+    float backgroundAlpha -> a
+    countdowntimer.controls.FadeMessagePanel lastPanel -> a
+    float alpha -> b
+    countdowntimer.controls.FadeMessagePanel$Anim stage -> a
+    long timerStarted -> a
+    void init() -> b
+    void setupTimer() -> c
+    void showMessage(javax.swing.JFrame,java.lang.String) -> a
+    void showMessageWide(javax.swing.JFrame,java.lang.String) -> b
+    void showMiniMessage(javax.swing.JFrame,java.lang.String) -> c
+    void showMessage(javax.swing.JFrame,java.lang.String,boolean,boolean) -> a
+    void goAwayQuickly() -> d
+    void setMessage(java.lang.String) -> a
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    void onTimerFired() -> a
+    void doFadeIn(long) -> a
+    void doHold(long) -> b
+    void doFadeOut(long) -> c
+    void doFinalFade$1349ef() -> e
+    void tidyUpPanel() -> f
+    void animate() -> g
+countdowntimer.controls.FadeMessagePanel$1 -> df:
+    countdowntimer.controls.FadeMessagePanel this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.controls.FadeMessagePanel$2 -> dd:
+    int[] $SwitchMap$countdowntimer$controls$FadeMessagePanel$Anim -> a
+countdowntimer.controls.FadeMessagePanel$Anim -> dt:
+    countdowntimer.controls.FadeMessagePanel$Anim FADE_IN -> a
+    countdowntimer.controls.FadeMessagePanel$Anim HOLD -> b
+    countdowntimer.controls.FadeMessagePanel$Anim FADE_OUT -> c
+    countdowntimer.controls.FadeMessagePanel$Anim FINAL_FADE -> d
+    countdowntimer.controls.FadeMessagePanel$Anim[] $VALUES -> a
+    countdowntimer.controls.FadeMessagePanel$Anim[] values() -> values
+    countdowntimer.controls.FadeMessagePanel$Anim valueOf(java.lang.String) -> valueOf
+countdowntimer.controls.ScrollOnJPanel -> B:
+    java.util.Map animators -> a
+    void hideAll() -> a
+    void setPositions() -> b
+    void stopAnimation(java.awt.Component) -> a
+    void scrollOn() -> c
+    void fadeOutContents(java.awt.Component,java.lang.Runnable) -> a
+countdowntimer.controls.ScrollOnJPanel$1 -> I:
+    java.lang.Runnable val$afterAction -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.controls.ScrollOnJPanel$ComponentFadeTimingTarget -> cG:
+    java.awt.Component component -> a
+    void begin() -> a
+    void end() -> b
+    void timingEvent(float) -> a
+countdowntimer.controls.ScrollOnJPanel$ComponentTravelTimingTarget -> dq:
+    java.awt.Component component -> a
+    int px -> a
+    int py -> b
+    int dx -> c
+    int dy -> d
+    void begin() -> a
+    void end() -> b
+    void timingEvent(float) -> a
+countdowntimer.dragndrop.DropFileAcceptor -> dZ:
+    countdowntimer.CountdownWindow$7 listener$422fde3d -> a
+    void dragEnter(java.awt.dnd.DropTargetDragEvent) -> dragEnter
+    void dragExit(java.awt.dnd.DropTargetEvent) -> dragExit
+    void dragOver(java.awt.dnd.DropTargetDragEvent) -> dragOver
+    void dropActionChanged(java.awt.dnd.DropTargetDragEvent) -> dropActionChanged
+    void drop(java.awt.dnd.DropTargetDropEvent) -> drop
+countdowntimer.glasspane.CustomGlassPane -> fR:
+    java.util.Map hoverTitle -> a
+    java.util.Map hoverBody -> b
+    boolean hoverDisabled -> a
+    javax.swing.Timer hoverTimer -> a
+    javax.swing.Timer hoverHelpAnimateTimer -> b
+    javax.swing.Timer tweakAnimateTimer -> c
+    javax.swing.Timer bannerTimer -> d
+    java.awt.Point lastMouseLocation -> a
+    boolean animateTweakButtons -> b
+    boolean oneTime -> c
+    boolean hover -> d
+    int animateStage -> a
+    float animationAmount -> a
+    int tweakAnimationStage -> b
+    java.lang.String title -> a
+    java.lang.String body -> b
+    java.awt.Point start -> b
+    java.awt.Point p1 -> c
+    java.awt.Point end -> d
+    boolean popupRight -> e
+    java.awt.Point lineTop -> e
+    java.awt.Point lineBottom -> f
+    java.awt.Rectangle framingRect -> a
+    boolean mouseMoving -> f
+    java.util.List tweakButtons -> a
+    boolean showNeedsRegistered -> g
+    java.awt.Shape registeredOnlyShape1 -> a
+    java.awt.Shape registeredOnlyShape2 -> b
+    int bannerStage -> c
+    void setShowNeedsRegistered(boolean) -> a
+    void globalDisableHoverHelp(boolean) -> b
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    void drawBackgroundSquare(java.awt.Graphics2D) -> a
+    void drawLineoutToSquare(java.awt.Graphics2D) -> b
+    void drawSpanningLine(java.awt.Graphics2D,float) -> a
+    void drawTitle(java.awt.Graphics2D,float) -> b
+    void drawBody(java.awt.Graphics2D,float) -> c
+    void drawTweakButtonAnimations(java.awt.Graphics2D) -> c
+    void drawAroundButton(blingclock.controls.GlowButton,java.awt.Graphics2D) -> a
+    void drawNeedsRegistered(java.awt.Graphics2D) -> d
+    void makeRegisteredOnly(java.awt.Graphics2D) -> e
+    void drawBlingclockWebsite(java.awt.Graphics2D) -> f
+    void startBannerTimer() -> g
+    void onBannerTimerFired() -> a
+    boolean contains(int,int) -> contains
+    void addHover(javax.swing.JComponent,java.lang.String,java.lang.String) -> a
+    void startMouseTracking() -> b
+    void startHoverAnimationTimer() -> h
+    void stopHoverAnimationTimer() -> i
+    void startTweakAnimationsOnce() -> c
+    void startTweakAnimations() -> j
+    void stopTweakAnimations() -> k
+    void onHoverAnimateTimerFired() -> d
+    void onTweakAnimateTimerFired() -> e
+    void onMouseTrackTimerFired() -> f
+    void checkIfMouseOverHoverComponent(int,int) -> a
+    void setupHover(javax.swing.JComponent) -> a
+    void calculateStartPoint(javax.swing.JComponent,java.awt.Point) -> a
+    boolean pointOverComponent(int,int,javax.swing.JComponent) -> a
+    java.awt.Point getLocationComponentWithinGlassPane(javax.swing.JComponent) -> a
+    void drawString(java.awt.Graphics,java.lang.String,int,int,int) -> a
+    void addTweakButton(blingclock.controls.GlowButton) -> a
+countdowntimer.glasspane.CustomGlassPane$1 -> cN:
+    countdowntimer.glasspane.CustomGlassPane this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.glasspane.CustomGlassPane$2 -> cO:
+    countdowntimer.glasspane.CustomGlassPane this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.glasspane.CustomGlassPane$3 -> cQ:
+    countdowntimer.glasspane.CustomGlassPane this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.glasspane.CustomGlassPane$4 -> cR:
+    countdowntimer.glasspane.CustomGlassPane this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.glasspane.Messages -> fX:
+    java.util.ResourceBundle RESOURCE_BUNDLE -> a
+    java.lang.String getString(java.lang.String) -> a
+countdowntimer.mini.DropDownFrame -> aP:
+    countdowntimer.KeyboardInputTarget keyboardInput -> a
+    javax.swing.JPanel backLabel -> a
+    void addFocusListener() -> b
+    void addResizeListener() -> c
+    void onWindowResized() -> a
+    countdowntimer.KeyboardInputTarget access$000(countdowntimer.mini.DropDownFrame) -> a
+countdowntimer.mini.DropDownFrame$1 -> ag:
+    countdowntimer.mini.DropDownFrame this$0 -> a
+    void windowGainedFocus(java.awt.event.WindowEvent) -> windowGainedFocus
+    void windowLostFocus(java.awt.event.WindowEvent) -> windowLostFocus
+countdowntimer.mini.DropDownFrame$2 -> af:
+    countdowntimer.mini.DropDownFrame this$0 -> a
+    void componentResized(java.awt.event.ComponentEvent) -> componentResized
+countdowntimer.mini.ImageLoader -> dh:
+    javax.swing.Icon loadImage(java.lang.String) -> a
+countdowntimer.mini.MiniControls -> bM:
+    countdowntimer.mini.MiniWindow listener$2a7830a7 -> a
+    javax.swing.JButton plusButton -> a
+    javax.swing.JButton minusButton -> b
+    countdowntimer.mini.MiniWindow access$000$65c7e8cb(countdowntimer.mini.MiniControls) -> a
+countdowntimer.mini.MiniControls$1 -> cq:
+    countdowntimer.mini.MiniControls this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.mini.MiniControls$2 -> ci:
+    countdowntimer.mini.MiniControls this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.mini.MiniControls2 -> dQ:
+    countdowntimer.mini.MiniWindow listener$2a7830a7 -> a
+    javax.swing.JButton pausePlayButton -> a
+    javax.swing.JButton resetButton -> b
+    void showPlay() -> a
+    void showPause() -> b
+    void hideReset() -> c
+    void showReset() -> d
+    countdowntimer.mini.MiniWindow access$000$14e9f04b(countdowntimer.mini.MiniControls2) -> a
+countdowntimer.mini.MiniControls2$1 -> da:
+    countdowntimer.mini.MiniControls2 this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.mini.MiniControls2$2 -> cZ:
+    countdowntimer.mini.MiniControls2 this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.mini.MiniDigitPanel -> eh:
+    javax.swing.Icon[] digitIcons -> a
+    javax.swing.JLabel[] digits -> a
+    int countDownSeconds -> a
+    void setShowDigits(boolean) -> a
+    void layoutDigits() -> a
+    void setTimeRemaining(int) -> a
+    void setDigit(int,int) -> a
+    void displayDigits() -> b
+    javax.swing.Icon makeDigitIcon(int) -> a
+countdowntimer.mini.MiniProgressBarPanel -> D:
+    int minutes -> a
+    int seconds -> b
+    int targetSeconds -> c
+    int tenths -> d
+    int segments -> e
+    boolean showAsSeconds -> a
+    double redRatio -> a
+    double amberRatio -> b
+    int currentPhase -> f
+    java.awt.GradientPaint currentPainter -> a
+    void setTargetSeconds(int) -> a
+    void setTenths(int) -> b
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    void paintSecondsBar(java.awt.Graphics) -> a
+    void paintProportionalBar(java.awt.Graphics) -> b
+countdowntimer.mini.MiniRestoreOrResizePanel -> fC:
+    countdowntimer.mini.MiniWindow listener$2a7830a7 -> a
+    blingclock.controls.SimpleImageButton restoreButton -> a
+    boolean pressed -> a
+    countdowntimer.mini.MiniWindow window -> b
+    int startX -> a
+    int baseWidth -> b
+    boolean overActionArea -> b
+    void hookupMouse() -> a
+    boolean access$000(countdowntimer.mini.MiniRestoreOrResizePanel) -> a
+    countdowntimer.mini.MiniWindow access$100$bf5ddbe(countdowntimer.mini.MiniRestoreOrResizePanel) -> a
+    boolean access$202(countdowntimer.mini.MiniRestoreOrResizePanel,boolean) -> a
+    blingclock.controls.SimpleImageButton access$300(countdowntimer.mini.MiniRestoreOrResizePanel) -> a
+    int access$402(countdowntimer.mini.MiniRestoreOrResizePanel,int) -> a
+    int access$502(countdowntimer.mini.MiniRestoreOrResizePanel,int) -> b
+    countdowntimer.mini.MiniWindow access$600(countdowntimer.mini.MiniRestoreOrResizePanel) -> b
+    boolean access$200(countdowntimer.mini.MiniRestoreOrResizePanel) -> b
+    int access$400(countdowntimer.mini.MiniRestoreOrResizePanel) -> a
+    int access$500(countdowntimer.mini.MiniRestoreOrResizePanel) -> b
+    boolean access$002(countdowntimer.mini.MiniRestoreOrResizePanel,boolean) -> b
+countdowntimer.mini.MiniRestoreOrResizePanel$1 -> v:
+    countdowntimer.mini.MiniRestoreOrResizePanel this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.mini.MiniRestoreOrResizePanel$2 -> t:
+    countdowntimer.mini.MiniRestoreOrResizePanel this$0 -> a
+    void mousePressed(java.awt.event.MouseEvent) -> mousePressed
+    void mouseReleased(java.awt.event.MouseEvent) -> mouseReleased
+    void mouseExited(java.awt.event.MouseEvent) -> mouseExited
+countdowntimer.mini.MiniRestoreOrResizePanel$3 -> r:
+    countdowntimer.mini.MiniRestoreOrResizePanel this$0 -> a
+    void mouseDragged(java.awt.event.MouseEvent) -> mouseDragged
+    void mouseMoved(java.awt.event.MouseEvent) -> mouseMoved
+countdowntimer.mini.MiniWindow -> dN:
+    countdowntimer.mini.MiniControls controlsPanel -> a
+    countdowntimer.mini.MiniControls2 controlsPanel2 -> a
+    countdowntimer.mini.MiniDigitPanel digitsPanel -> a
+    countdowntimer.mini.MiniProgressBarPanel progressPanel -> a
+    countdowntimer.mini.MiniRestoreOrResizePanel restorePanel -> a
+    countdowntimer.timer.internal.CountdownTimerImpl countdownTimer$21b3c26e -> a
+    countdowntimer.CountdownWindow restoreWindow -> a
+    countdowntimer.mini.WindowMover windowMover -> a
+    countdowntimer.mini.DropDownFrame dropDownFrame -> a
+    int timerInstance -> a
+    void setCountdownTimer$207a8713(countdowntimer.timer.internal.CountdownTimerImpl) -> a
+    void playAudioClip(java.lang.String) -> a
+    java.net.URL getSoundUrl(java.lang.String) -> a
+    void onWindowResized() -> a
+    void setupPanels() -> h
+    void openMiniFrame() -> l
+    void closeMiniFrame() -> m
+    void setupMovementListeners() -> n
+    void onCountdownReachedZero() -> i
+    void onCountdownZeroRestartingLoop() -> j
+    void onCountdownReachedZeroEnteringOverrun() -> k
+    void onTick(int,long,long) -> a
+    void updateDisplay() -> o
+    void savePosition() -> b
+    void showPausePlayButtons() -> p
+    void onPausePlayButtonPressed() -> c
+    void onResetButtonPressed() -> d
+    void onPlusButtonPressed() -> v
+    void onMinusButtonPressed() -> u
+    void onRestoreButtonPressed() -> e
+    void restoreToPreviousPosition() -> f
+    void restoring() -> g
+    void applyTime(int,int,int,int) -> a
+    javax.swing.JLayeredPane getTheLayeredPane() -> a
+    java.awt.Rectangle getDigitsPanelBounds() -> a
+    boolean isTimeMode() -> a
+    void keyboardPausePlay() -> r
+    void keyboardReset() -> z
+    void keyboardVisualiseLeft() -> I
+    void keyboardVisualiseRight() -> J
+    void displayNotRegisteredAndInTrialMode() -> y
+    void keyboardRestoreWindowPosition() -> K
+    void timePanelClosed() -> P
+    void timePanelOpen() -> Q
+    void applyEnteredTweak(java.lang.String) -> b
+    countdowntimer.mini.DropDownFrame access$000(countdowntimer.mini.MiniWindow) -> a
+    countdowntimer.mini.MiniProgressBarPanel access$200(countdowntimer.mini.MiniWindow) -> a
+    countdowntimer.mini.MiniDigitPanel access$300(countdowntimer.mini.MiniWindow) -> a
+countdowntimer.mini.MiniWindow$1 -> br:
+    countdowntimer.mini.MiniWindow this$0 -> a
+    void componentResized(java.awt.event.ComponentEvent) -> componentResized
+    void componentMoved(java.awt.event.ComponentEvent) -> componentMoved
+countdowntimer.mini.MiniWindow$2 -> bu:
+    countdowntimer.mini.MiniWindow this$0 -> a
+    void windowGainedFocus(java.awt.event.WindowEvent) -> windowGainedFocus
+    void windowLostFocus(java.awt.event.WindowEvent) -> windowLostFocus
+countdowntimer.mini.MiniWindow$3 -> bw:
+    countdowntimer.mini.MiniWindow this$0 -> a
+    void begin() -> a
+    void end() -> b
+    void timingEvent(float) -> a
+countdowntimer.mini.MiniWindow$4 -> by:
+    int sw -> a
+    int sh -> b
+    countdowntimer.mini.MiniWindow this$0 -> a
+    void begin() -> a
+    void end() -> b
+    void timingEvent(float) -> a
+countdowntimer.mini.MiniWindow$5 -> bB:
+    countdowntimer.mini.MiniWindow this$0 -> a
+    void run() -> run
+countdowntimer.mini.MiniWindow$5$1 -> fZ:
+    countdowntimer.mini.MiniWindow$5 this$1 -> a
+    void run() -> run
+countdowntimer.mini.MiniWindow$AlarmThread -> gb:
+    countdowntimer.mini.MiniWindow this$0 -> a
+    void run() -> run
+countdowntimer.mini.MiniWindow$AlarmThread$1 -> aK:
+    countdowntimer.mini.MiniWindow$AlarmThread this$1 -> a
+    void run() -> run
+countdowntimer.mini.MiniWindow$AlarmThread$2 -> aN:
+    countdowntimer.mini.MiniWindow$AlarmThread this$1 -> a
+    void run() -> run
+countdowntimer.mini.WindowMover -> Q:
+    java.util.Map components -> a
+    boolean osx -> a
+    boolean pressed -> b
+    int dragStartX -> a
+    int dragStartY -> b
+    java.awt.Component dragComponent -> a
+    void addComponent(java.awt.Component) -> a
+    boolean access$100(countdowntimer.mini.WindowMover) -> a
+    boolean access$102(countdowntimer.mini.WindowMover,boolean) -> a
+    java.awt.Component access$202(countdowntimer.mini.WindowMover,java.awt.Component) -> a
+    int access$302(countdowntimer.mini.WindowMover,int) -> a
+    int access$402(countdowntimer.mini.WindowMover,int) -> b
+    java.util.Map access$500(countdowntimer.mini.WindowMover) -> a
+    java.awt.Component access$200(countdowntimer.mini.WindowMover) -> a
+    int access$300(countdowntimer.mini.WindowMover) -> a
+    int access$400(countdowntimer.mini.WindowMover) -> b
+    boolean access$800(countdowntimer.mini.WindowMover) -> b
+countdowntimer.mini.WindowMover$1 -> co:
+    java.awt.Component val$toMove -> a
+    countdowntimer.mini.WindowMover this$0 -> a
+    void mousePressed(java.awt.event.MouseEvent) -> mousePressed
+    void mouseReleased(java.awt.event.MouseEvent) -> mouseReleased
+countdowntimer.mini.WindowMover$2 -> ct:
+    java.awt.Component val$toMove -> a
+    countdowntimer.mini.WindowMover this$0 -> a
+    void mouseDragged(java.awt.event.MouseEvent) -> mouseDragged
+countdowntimer.mini.WindowMover$ComponentInfo -> dV:
+    int wx -> a
+    int wy -> b
+    int access$602(countdowntimer.mini.WindowMover$ComponentInfo,int) -> a
+    int access$702(countdowntimer.mini.WindowMover$ComponentInfo,int) -> b
+    int access$600(countdowntimer.mini.WindowMover$ComponentInfo) -> a
+    int access$700(countdowntimer.mini.WindowMover$ComponentInfo) -> b
+countdowntimer.preferences.Messages -> fB:
+    java.util.ResourceBundle RESOURCE_BUNDLE -> a
+    java.lang.String getString(java.lang.String) -> a
+countdowntimer.preferences.Preferences -> countdowntimer.preferences.Preferences:
+    countdowntimer.preferences.Preferences INSTANCE -> a
+    java.util.List listeners -> a
+    java.util.prefs.Preferences javaPrefs -> a
+    java.lang.String DEFAULT -> a
+    java.lang.Object flushLock -> a
+    boolean flushing -> a
+    countdowntimer.preferences.Preferences getInstance() -> a
+    void addListener(countdowntimer.preferences.PreferencesListener) -> a
+    void notifyPreferenceOrTweakChanged() -> a
+    float getButtonPlayPauseDisabledButtonFade() -> a
+    boolean getPreserveDigitsRatio() -> a
+    int getAndIncrementRunCount() -> a
+    long getInstallDate() -> a
+    void incrementRunCountThatDoesntReset() -> b
+    int getRunCountThatDoesntReset() -> b
+    void resetRunCount() -> c
+    int getTimeUnit() -> c
+    void setTimeUnit(int) -> a
+    boolean getWindowToFrontOnAlarm() -> b
+    void setWindowToFrontOnAlarm(boolean) -> a
+    countdowntimer.preferences.TimerPreferenceImpl getTimerPreference$338a8c69(int) -> a
+    boolean isAlarmSoundMuted() -> c
+    void setAlarmSoundMuted(boolean) -> b
+    boolean getHideHourDigitsIfPossible() -> d
+    void setHideHourDigitsIfPossible(boolean) -> c
+    boolean getRememberPositionOnScreen() -> e
+    void setRememberPositionOnScreen(boolean) -> d
+    java.lang.String getMiniMode() -> a
+    void setMiniMode(java.lang.String) -> a
+    boolean getIncludeTimeInTitle() -> f
+    void setIncludeTimeInTitle(boolean) -> e
+    boolean getRegisteredProperty(java.lang.String,boolean) -> a
+    java.lang.String getSoundFile() -> b
+    void setSoundFile(java.lang.String) -> b
+    void setSoundRepeat(int) -> b
+    void setSoundDelay(int) -> c
+    int getSoundRepeat() -> d
+    int getSoundDelay() -> e
+    boolean isRegistered() -> o
+    boolean isTrial() -> p
+    void resetToDefault() -> d
+    boolean isHideMouseEnabled() -> g
+    void setHideMouseEnabled(boolean) -> f
+    java.lang.String getUpdateOption() -> c
+    void setUpdateOption(java.lang.String) -> c
+    boolean shouldCheckForNewVersion() -> h
+    java.lang.String getLicenseCode() -> d
+    void setLicenseCode(java.lang.String) -> d
+    boolean isAllowClickGridToSetTime() -> i
+    void setAllowClickGridToSetTime(boolean) -> g
+    boolean isAllowSetTimeWithKeyboard() -> j
+    void setAllowSetTimeWithKeyboard(boolean) -> h
+    long getTrialLockedUntilDate() -> b
+    void setTrialLockedUntil(long) -> a
+    void setTrialWasRenabledTimewarpCheck(long) -> b
+    long getTrialWasRenabledTimewarpCheck() -> c
+    countdowntimer.preferences.TickingPref getTickingPref(int) -> a
+    void storeTickingPref(countdowntimer.preferences.TickingPref) -> a
+    void asyncFlush() -> f
+    void flush() -> e
+    boolean haveShownTrialForVersion(int) -> a
+    void setHaveShownTrialForVersion(int,boolean) -> a
+    countdowntimer.tweaks.TweakValue getTweakProperty(java.lang.String,countdowntimer.tweaks.TweakValue) -> a
+    void setTweakProperty(java.lang.String,countdowntimer.tweaks.TweakValue) -> a
+    void setGuruTweakProperty(java.lang.String,boolean) -> a
+    boolean getGuruTweakProperty(java.lang.String) -> a
+    java.lang.String getStartupDisplay() -> e
+    void setStartupDisplay(java.lang.String) -> e
+    boolean getShow24Clock() -> k
+    void setShow24Clock(boolean) -> i
+    boolean getBlinkSeparatorsInTimeMode() -> l
+    void setBlinkSeparatorsInTimeMode(boolean) -> j
+    boolean getUseFullScreenAPI() -> m
+    void setUseFullScreenAPI(boolean) -> k
+    boolean getFlashDigitsIfOverrunning() -> n
+    void setFlashDigitsIfOverrunning(boolean) -> l
+    void setCustomSoundName(java.lang.String) -> f
+    java.lang.String getCustomSoundFileName() -> f
+    void setStoredSoundName(java.lang.String) -> g
+    java.lang.String getStoredSoundFileName() -> g
+    java.lang.Object access$000(countdowntimer.preferences.Preferences) -> a
+    boolean access$102(countdowntimer.preferences.Preferences,boolean) -> a
+    java.util.prefs.Preferences access$200(countdowntimer.preferences.Preferences) -> a
+countdowntimer.preferences.Preferences$1 -> aH:
+    countdowntimer.preferences.Preferences this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PreferencesListener -> fT:
+    void onPreferencesChanged() -> b_
+countdowntimer.preferences.PrefsPanel -> dK:
+    int prefsAlpha -> a
+    java.lang.String SHOP_URL -> a
+    java.awt.Font prefsFont -> a
+    java.awt.Font smallFont -> b
+    java.awt.Font small2Font -> c
+    java.awt.Font buttonFont -> d
+    boolean registered -> a
+    boolean trialMode -> b
+    boolean jumpToBuyPanel -> c
+    java.lang.Runnable backAction -> a
+    java.util.Stack menus -> a
+    javax.swing.Timer timer -> a
+    java.awt.Component lastClicked -> a
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    void jumpStraightToBuyPanel() -> d
+    void scrollOn() -> c
+    void createMainMenu() -> p
+    void createWindowMenu() -> e
+    void createDisplayAndColourMenu() -> f
+    void createMiniTimerBarMenu() -> g
+    void addStartupRadioButton(java.lang.String,javax.swing.ButtonGroup,java.lang.String) -> a
+    void addMiniBarMode(java.lang.String,javax.swing.ButtonGroup,java.lang.String) -> b
+    void createCheckForUpdatesMenu() -> h
+    void createAlarmSoundsSettings() -> i
+    void createTimeIncrementSettings() -> j
+    void createAboutMenu() -> k
+    java.lang.String getFormattedVersion() -> a
+    void createRegistrationMenu() -> l
+    void createUnregisteredMenu() -> q
+    void buildThankyou() -> r
+    void addLinkMainLabel(java.lang.String,java.lang.Runnable) -> a
+    void addRegistrationEntryField(javax.swing.JLabel) -> a
+    void processValidLicense(java.lang.String) -> a
+    java.lang.String cleanLicense(java.lang.String) -> a
+    boolean isValidChar(char) -> a
+    boolean isValid(java.lang.String) -> a
+    void createRegisteredMenu() -> s
+    void createResetSettings() -> m
+    void onResetClicked() -> t
+    void goBackToMainMenu(int) -> a
+    void playSound(java.lang.String) -> b
+    java.net.URL getSoundUrl(java.lang.String) -> a
+    void createMenu(java.lang.Runnable) -> a
+    void doBackAction() -> n
+    void closePrefsPanel() -> o
+    void fadeOutPanel() -> u
+    void addFiller() -> v
+    void addLabel(java.lang.String,java.awt.Color) -> a
+    void addLogo() -> w
+    void addLabel(java.lang.String) -> c
+    void addSmallLabel(java.lang.String) -> d
+    javax.swing.JLabel addSmallestLabel(java.lang.String) -> a
+    void addHeading(java.lang.String) -> e
+    void addButton(java.lang.String,java.lang.Runnable) -> b
+    void addRegisteredUsersOnly(java.lang.String) -> f
+    void addEnabledForTrialMode(java.lang.String) -> g
+    void addCheck(java.lang.String,countdowntimer.preferences.PrefsPanel$CheckOption) -> a
+    void addRadio(java.lang.String,javax.swing.ButtonGroup,countdowntimer.preferences.PrefsPanel$CheckOption) -> a
+    void addTextField(java.lang.String,countdowntimer.preferences.PrefsPanel$TextPreference) -> a
+    void addChangeLink(java.lang.String,java.lang.Runnable) -> c
+    void addClickableLink(java.lang.String,java.lang.String,java.lang.Runnable) -> a
+    javax.swing.JPanel createPair(javax.swing.JComponent,javax.swing.JComponent) -> a
+    javax.swing.JPanel createPair2(javax.swing.JComponent,javax.swing.JComponent) -> b
+    javax.swing.Icon loadImage(java.lang.String) -> a
+    void access$000(countdowntimer.preferences.PrefsPanel,java.lang.String) -> a
+    void access$100(countdowntimer.preferences.PrefsPanel,java.lang.String,countdowntimer.preferences.PrefsPanel$CheckOption) -> a
+    boolean access$200(countdowntimer.preferences.PrefsPanel) -> a
+    void access$300(countdowntimer.preferences.PrefsPanel,java.lang.String) -> b
+    boolean access$400(countdowntimer.preferences.PrefsPanel) -> b
+    void access$500(countdowntimer.preferences.PrefsPanel,java.lang.String,countdowntimer.preferences.PrefsPanel$TextPreference) -> a
+    void access$600(countdowntimer.preferences.PrefsPanel) -> a
+    java.lang.Runnable access$700(countdowntimer.preferences.PrefsPanel) -> a
+    void access$800(countdowntimer.preferences.PrefsPanel,java.lang.String,java.lang.Runnable) -> a
+    void access$900(countdowntimer.preferences.PrefsPanel,java.lang.String,javax.swing.ButtonGroup,countdowntimer.preferences.PrefsPanel$CheckOption) -> a
+    void access$1000(countdowntimer.preferences.PrefsPanel,java.lang.String) -> c
+    void access$1100(countdowntimer.preferences.PrefsPanel) -> b
+    void access$1200(countdowntimer.preferences.PrefsPanel,java.lang.String,java.awt.Color) -> a
+    void access$1300(countdowntimer.preferences.PrefsPanel,java.lang.String) -> d
+    javax.swing.JLabel access$1400(countdowntimer.preferences.PrefsPanel,java.lang.String) -> a
+    java.lang.String access$1500(countdowntimer.preferences.PrefsPanel) -> a
+    void access$1600(countdowntimer.preferences.PrefsPanel,java.lang.String,java.lang.Runnable) -> b
+    void access$1700(countdowntimer.preferences.PrefsPanel,java.lang.String) -> e
+    void access$1800(countdowntimer.preferences.PrefsPanel) -> c
+    void access$1900(countdowntimer.preferences.PrefsPanel,java.lang.String,java.lang.String,java.lang.Runnable) -> a
+    void access$2000(countdowntimer.preferences.PrefsPanel) -> d
+    void access$2100(countdowntimer.preferences.PrefsPanel) -> e
+    int access$2220(countdowntimer.preferences.PrefsPanel,int) -> a
+    int access$2200(countdowntimer.preferences.PrefsPanel) -> a
+    javax.swing.Timer access$2300(countdowntimer.preferences.PrefsPanel) -> a
+    java.awt.Component access$2402(countdowntimer.preferences.PrefsPanel,java.awt.Component) -> a
+countdowntimer.preferences.PrefsPanel$1 -> aj:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$10 -> cA:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$11 -> cw:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$12 -> cx:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$12$1 -> bc:
+    boolean getCurrent() -> a
+    void onClicked(boolean) -> a
+countdowntimer.preferences.PrefsPanel$12$2 -> bd:
+    boolean getCurrent() -> a
+    void onClicked(boolean) -> a
+countdowntimer.preferences.PrefsPanel$12$3 -> ba:
+    boolean getCurrent() -> a
+    void onClicked(boolean) -> a
+countdowntimer.preferences.PrefsPanel$12$4 -> bb:
+    boolean getCurrent() -> a
+    void onClicked(boolean) -> a
+countdowntimer.preferences.PrefsPanel$12$5 -> aR:
+    java.lang.String getCurrent() -> a
+    void onChanged(java.lang.String) -> a
+countdowntimer.preferences.PrefsPanel$12$6 -> aQ:
+    boolean getCurrent() -> a
+    void onClicked(boolean) -> a
+countdowntimer.preferences.PrefsPanel$12$7 -> aM:
+    java.lang.String getCurrent() -> a
+    void onChanged(java.lang.String) -> a
+countdowntimer.preferences.PrefsPanel$13 -> bt:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$13$1 -> dj:
+    boolean getCurrent() -> a
+    void onClicked(boolean) -> a
+countdowntimer.preferences.PrefsPanel$13$2 -> dn:
+    boolean getCurrent() -> a
+    void onClicked(boolean) -> a
+countdowntimer.preferences.PrefsPanel$13$3 -> dm:
+    boolean getCurrent() -> a
+    void onClicked(boolean) -> a
+countdowntimer.preferences.PrefsPanel$13$4 -> dD:
+    boolean getCurrent() -> a
+    void onClicked(boolean) -> a
+countdowntimer.preferences.PrefsPanel$14 -> bv:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$15 -> bn:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$16 -> bq:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$17 -> bD:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$17$1 -> dx:
+    boolean getCurrent() -> a
+    void onClicked(boolean) -> a
+countdowntimer.preferences.PrefsPanel$17$2 -> dw:
+    boolean getCurrent() -> a
+    void onClicked(boolean) -> a
+countdowntimer.preferences.PrefsPanel$18 -> bE:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$19 -> bx:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$19$1 -> dC:
+    countdowntimer.preferences.PrefsPanel$19 this$1 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$2 -> am:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$20 -> bm:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$20$1 -> fy:
+    countdowntimer.preferences.PrefsPanel$20 this$1 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$21 -> bk:
+    java.lang.Runnable val$r -> a
+    javax.swing.JLabel val$label -> a
+    void mouseClicked(java.awt.event.MouseEvent) -> mouseClicked
+    void mouseEntered(java.awt.event.MouseEvent) -> mouseEntered
+    void mouseExited(java.awt.event.MouseEvent) -> mouseExited
+countdowntimer.preferences.PrefsPanel$22 -> bj:
+    javax.swing.JTextArea val$textArea -> a
+    void focusGained(java.awt.event.FocusEvent) -> focusGained
+countdowntimer.preferences.PrefsPanel$23 -> bi:
+    javax.swing.JTextArea val$textArea -> a
+    javax.swing.JLabel val$regLabel -> a
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void changedUpdate(javax.swing.event.DocumentEvent) -> changedUpdate
+    void insertUpdate(javax.swing.event.DocumentEvent) -> insertUpdate
+    void removeUpdate(javax.swing.event.DocumentEvent) -> removeUpdate
+countdowntimer.preferences.PrefsPanel$24 -> bW:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$25 -> bX:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$25$1 -> cn:
+    countdowntimer.preferences.PrefsPanel$25 this$1 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$26 -> bY:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$27 -> ca:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.preferences.PrefsPanel$29 -> cc:
+    java.lang.Runnable val$r -> a
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$3 -> an:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$30 -> bP:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$31 -> bT:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$32 -> bS:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.preferences.PrefsPanel$33 -> bV:
+    javax.swing.JLabel val$label -> a
+    java.lang.Runnable val$action -> a
+    java.awt.Color val$yellow -> a
+    java.awt.Color val$white -> b
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void mouseClicked(java.awt.event.MouseEvent) -> mouseClicked
+    void mouseEntered(java.awt.event.MouseEvent) -> mouseEntered
+    void mouseExited(java.awt.event.MouseEvent) -> mouseExited
+countdowntimer.preferences.PrefsPanel$34 -> bU:
+    countdowntimer.preferences.PrefsPanel$CheckOption val$checkOption -> a
+    javax.swing.JCheckBox val$check -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.preferences.PrefsPanel$35 -> az:
+    javax.swing.JRadioButton val$check -> a
+    countdowntimer.preferences.PrefsPanel$CheckOption val$action -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.preferences.PrefsPanel$36 -> aA:
+    javax.swing.JTextField val$textField -> a
+    countdowntimer.preferences.PrefsPanel$TextPreference val$textOption -> a
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void changedUpdate(javax.swing.event.DocumentEvent) -> changedUpdate
+    void insertUpdate(javax.swing.event.DocumentEvent) -> insertUpdate
+    void removeUpdate(javax.swing.event.DocumentEvent) -> removeUpdate
+    void updateText() -> a
+countdowntimer.preferences.PrefsPanel$37 -> ax:
+    javax.swing.JPanel val$p -> a
+    java.lang.Runnable val$action -> a
+    javax.swing.JLabel val$changeLabel -> a
+    java.awt.Color val$white -> a
+    java.awt.Color val$green -> b
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void mouseClicked(java.awt.event.MouseEvent) -> mouseClicked
+    void mouseEntered(java.awt.event.MouseEvent) -> mouseEntered
+    void mouseExited(java.awt.event.MouseEvent) -> mouseExited
+countdowntimer.preferences.PrefsPanel$4 -> ao:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$5 -> ap:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$6 -> aq:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$7 -> ar:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$8 -> as:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$9 -> at:
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    void run() -> run
+countdowntimer.preferences.PrefsPanel$CheckOption -> fs:
+    boolean getCurrent() -> a
+    void onClicked(boolean) -> a
+countdowntimer.preferences.PrefsPanel$MiniBarModeCheckOption -> aC:
+    java.lang.String option -> a
+    boolean getCurrent() -> a
+    void onClicked(boolean) -> a
+countdowntimer.preferences.PrefsPanel$SoundOption -> eJ:
+    java.lang.String sound -> a
+    int repeat -> a
+    int repeatDelay -> b
+    countdowntimer.preferences.PrefsPanel this$0 -> a
+    boolean getCurrent() -> a
+    void onClicked(boolean) -> a
+countdowntimer.preferences.PrefsPanel$StartupOption -> aS:
+    java.lang.String value -> a
+    boolean getCurrent() -> a
+    void onClicked(boolean) -> a
+countdowntimer.preferences.PrefsPanel$TextPreference -> bG:
+    java.lang.String getCurrent() -> a
+    void onChanged(java.lang.String) -> a
+countdowntimer.preferences.PrefsPanel$TimeChangeOption -> K:
+    int amount -> a
+    boolean getCurrent() -> a
+    void onClicked(boolean) -> a
+countdowntimer.preferences.PrefsPanel$UpdateCheckOption -> fH:
+    java.lang.String option -> a
+    boolean getCurrent() -> a
+    void onClicked(boolean) -> a
+countdowntimer.preferences.TickingPref -> gd:
+    java.lang.String description -> a
+    int id -> a
+    long totalSecondsToCount -> a
+    long latestStartedTime -> b
+    long tenthsUsedAlready -> c
+    boolean ticking -> a
+countdowntimer.preferences.TimerPreferenceImpl -> cE:
+    java.util.prefs.Preferences javaPrefs -> a
+    int instance -> a
+    int getDisplayMode() -> a
+    void setDisplayMode(int) -> a
+    boolean isFractionDigitsShown() -> a
+    void setFractionDigitsShown(boolean) -> a
+    countdowntimer.timer.internal.SubMode getSubMode() -> a
+    void setSubMode(countdowntimer.timer.internal.SubMode) -> a
+    java.awt.Rectangle getLastWindowPosition() -> a
+    void setLastPosition(java.awt.Rectangle) -> a
+    void setLastMiniPosition(java.awt.Rectangle) -> b
+    java.awt.Rectangle getLastMiniWindowPosition() -> b
+    double getRedRatio() -> a
+    double getAmberRatio() -> b
+    void setRedRatio(double) -> a
+    void setAmberRatio(double) -> b
+    java.lang.String getWindowTitle() -> a
+    void setWindowTitle(java.lang.String) -> a
+    java.lang.String getTimerTitle() -> b
+    void setTimerTitle(java.lang.String) -> b
+    boolean isCompactDigitsLayout() -> b
+    void setCompactDigitsLayout(boolean) -> b
+    boolean isRemoveTitlebar() -> c
+    void setRemoveTitlebar(boolean) -> c
+    boolean isOnTop() -> d
+    void setOnTop(boolean) -> d
+    boolean isRegistered() -> e
+    boolean isTrial() -> f
+countdowntimer.preferences.UserLocalFileAccess -> fl:
+    java.lang.String dataDir -> a
+    void copyFile(java.io.File,java.lang.String) -> a
+    void deleteFilesWithPrefix(java.lang.String) -> a
+    void copyFile(java.io.File,java.io.File) -> a
+    void setupDataDirectory() -> a
+    void hide(java.io.File) -> a
+    void createExplainFile() -> b
+    java.net.URL getUrlForFile(java.lang.String) -> a
+countdowntimer.registration.Messages -> x:
+    java.util.ResourceBundle RESOURCE_BUNDLE -> a
+    java.lang.String getString(java.lang.String) -> a
+countdowntimer.registration.Registration -> fU:
+    java.util.List listeners -> a
+    d3bug.licensing.SimpleRegistration simpleReg -> a
+    boolean trialMode -> a
+    int runCount -> b
+    int trialsRemaining -> a
+    countdowntimer.registration.Registration INSTANCE -> a
+    boolean SIMULATE_UNREGISTERED -> b
+    boolean SIMULATE_TRIALMODE -> c
+    boolean SIMULATE_TRIALEXPIRED -> d
+    void addListener$62ebae84(countdowntimer.CountdownWindow$6) -> a
+    countdowntimer.registration.Registration getInstance() -> a
+    boolean installedRecently() -> e
+    int getUsage() -> a
+    int getDaysTillUnlockAgainApprox() -> b
+    boolean isValid(java.lang.String) -> a
+    boolean isRegistered() -> a
+    boolean isTrialMode() -> b
+    boolean isNotRegisteredAndNotInTrialMode() -> c
+    boolean isTrialModeOrRegistered() -> d
+    java.lang.String getRegisteredName() -> a
+    java.lang.String getRegisteredEmail() -> b
+    java.lang.String getSpecialMessage1() -> c
+    java.lang.String getSpecialMessage2() -> d
+    void register(java.lang.String) -> a
+    java.lang.String wrap(java.lang.String) -> a
+    java.lang.String unwrap(java.lang.String) -> b
+    java.lang.String reverse(java.lang.String) -> c
+countdowntimer.registration.RegistrationThankyouPanel -> d:
+    java.awt.Font titleFont -> a
+    java.awt.Font mainFont -> b
+    countdowntimer.tweaks.LabelAnimator animator -> a
+    void init() -> a
+    void playSound() -> b
+    java.net.URL getSoundUrl(java.lang.String) -> a
+    void addCentreText(java.lang.String) -> a
+    void addCentreTitle(java.lang.String) -> b
+    void addTitle(java.lang.String) -> c
+    void addText(java.lang.String) -> d
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    void fadeOutPanel() -> c
+    void access$000(countdowntimer.registration.RegistrationThankyouPanel) -> a
+countdowntimer.registration.RegistrationThankyouPanel$1 -> dp:
+    countdowntimer.registration.RegistrationThankyouPanel this$0 -> a
+    void mouseClicked(java.awt.event.MouseEvent) -> mouseClicked
+countdowntimer.registration.RegistrationThankyouPanel$2 -> ds:
+    countdowntimer.registration.RegistrationThankyouPanel this$0 -> a
+    void run() -> b
+countdowntimer.registration.RegistrationWatcher -> fv:
+    java.util.Timer timer -> a
+    java.lang.String lastPoll -> a
+    void start() -> a
+    java.lang.String cleanLicense(java.lang.String) -> a
+    java.lang.String timeAboveBelowIfPresent(java.lang.String) -> b
+    boolean isValidChar(char) -> a
+    boolean isValid(java.lang.String) -> a
+    void registerLicense(java.lang.String) -> a
+    java.lang.String access$100(countdowntimer.registration.RegistrationWatcher) -> a
+    java.lang.String access$102(countdowntimer.registration.RegistrationWatcher,java.lang.String) -> a
+countdowntimer.registration.RegistrationWatcher$1 -> J:
+countdowntimer.registration.RegistrationWatcher$RegistrationTimerTask -> P:
+    countdowntimer.registration.RegistrationWatcher this$0 -> a
+    void run() -> run
+    java.lang.String pollClipboard() -> a
+countdowntimer.sound.PlaySoundRunnable -> i:
+    java.net.URL url -> a
+    int repeat -> a
+    int delay -> b
+    countdowntimer.sound.SoundPosition curPosition -> a
+    javax.sound.sampled.AudioInputStream audioInputStream -> a
+    javax.sound.sampled.SourceDataLine auline -> a
+    void run() -> run
+    void playSoundNow() -> a
+    boolean prepareAULine() -> a
+    void prepareAudioStream() -> b
+    void sleepThread() -> c
+countdowntimer.sound.PlaySoundsJLRunnable -> a:
+    java.net.URL url -> a
+    int repeat -> a
+    int delay -> b
+    void run() -> run
+    void sleepThread() -> a
+countdowntimer.sound.SoundPlayer -> fW:
+    java.util.concurrent.Executor executor -> a
+    java.util.concurrent.atomic.AtomicInteger count -> a
+    void playSound(java.net.URL,int,boolean) -> a
+    void decreaseSoundCount() -> a
+    void playCustomAlarmSound() -> b
+    void playSound(java.net.URL,int,int,boolean) -> a
+countdowntimer.sound.SoundPosition -> f:
+    countdowntimer.sound.SoundPosition LEFT -> a
+    countdowntimer.sound.SoundPosition RIGHT -> b
+    countdowntimer.sound.SoundPosition NORMAL -> c
+    countdowntimer.sound.SoundPosition[] $VALUES -> a
+    countdowntimer.sound.SoundPosition[] values() -> values
+    countdowntimer.sound.SoundPosition valueOf(java.lang.String) -> valueOf
+countdowntimer.sound.SoundUtil -> bF:
+    void playAudioClip(java.lang.String,boolean) -> a
+    java.net.URL getSoundUrl(java.lang.String) -> a
+countdowntimer.timer.CountdownRegistry -> bZ:
+    countdowntimer.timer.CountdownRegistry INSTANCE -> a
+    countdowntimer.timer.CountdownRegistry getInstance() -> a
+    countdowntimer.timer.internal.CountdownTimerImpl createTimer$20157a0d() -> a
+    countdowntimer.timer.internal.TickingCountdownImpl getTimerEvent$7302046f(int) -> a
+    countdowntimer.timer.internal.TickingCountdownImpl getEventFromPref(countdowntimer.preferences.TickingPref) -> a
+countdowntimer.timer.CountdownTimerListener -> bf:
+    void onTick(int,long,long) -> a
+    void onCountdownReachedZero() -> i
+    void onCountdownZeroRestartingLoop() -> j
+    void onCountdownReachedZeroEnteringOverrun() -> k
+countdowntimer.timer.gui.CurrentTimersPane -> dk:
+    void populateTestData() -> a
+countdowntimer.timer.gui.CurrentTimersPanel -> cH:
+    javax.swing.JScrollPane scrollPane -> a
+    countdowntimer.timer.gui.CurrentTimersPane timersPane -> a
+    void createControls() -> a
+countdowntimer.timer.gui.DisplayTimerPanel -> aB:
+countdowntimer.timer.internal.CountdownTimerImpl -> ga:
+    java.util.Timer timer -> a
+    boolean running -> a
+    java.util.TimerTask timerTask -> a
+    long timerBaseTime -> a
+    long timerMillisBase -> b
+    long countdownTimerHundreths -> c
+    long targetSeconds -> d
+    long baseStopwatchMs -> e
+    java.util.List listeners -> a
+    java.lang.Object timerLock -> a
+    countdowntimer.timer.internal.Mode timerMode -> a
+    countdowntimer.timer.internal.TickingCountdownImpl linkedEvent$8cec1b9 -> a
+    countdowntimer.preferences.PreferencesListener prefsListener -> a
+    boolean suspendCallbacks -> b
+    countdowntimer.timer.internal.SubMode subMode -> a
+    java.util.Random random -> a
+    long lastCalledSeconds -> f
+    long previousHundreds -> g
+    countdowntimer.timer.internal.TickingCountdownImpl savedLinkedEvent$8cec1b9 -> b
+    void setLinkedEvent$532d2062(countdowntimer.timer.internal.TickingCountdownImpl) -> a
+    int getDays() -> a
+    void setSeconds(long) -> a
+    void setSecondsTo(long) -> b
+    void setTenthsSeconds(long) -> c
+    long getSeconds() -> a
+    long getHundreths() -> b
+    long getSecondsToday() -> c
+    void setTargetSeconds(long) -> d
+    long getTargetSeconds() -> d
+    void start() -> a
+    void restartTimer() -> b
+    void startTimerTask() -> i
+    void stop() -> c
+    boolean isRunning() -> a
+    void countdownTicked() -> j
+    void adjustTimers() -> k
+    void timeTick() -> l
+    void stopwatchTick() -> m
+    void callbackListeners() -> d
+    void callbackListeners(boolean) -> a
+    void informListenersZeroAndStop() -> n
+    void informListenersZeroAndLoop() -> o
+    void informListenersZeroAndStopwatch() -> p
+    void addListener(countdowntimer.timer.CountdownTimerListener) -> a
+    void removeListener(countdowntimer.timer.CountdownTimerListener) -> b
+    void doTick() -> q
+    void reduceTime(int) -> a
+    void increaseTime(int) -> b
+    void resetTime() -> e
+    long getCountdownTenths() -> e
+    boolean isTimeMode() -> b
+    boolean isStopwatchMode() -> c
+    boolean isCountdownMode() -> d
+    boolean isOverrunningNow() -> e
+    void startCountdownMode() -> f
+    void startStopwatchMode() -> g
+    void startTimeMode() -> h
+    void stopPreviousMode() -> r
+    void beginTimeMode() -> s
+    void restoreFromTimeMode() -> t
+    void restoreFromStopwatchMode() -> u
+    void cloneTimer$207a8713(countdowntimer.timer.internal.CountdownTimerImpl) -> a
+    void setSubMode(countdowntimer.timer.internal.SubMode) -> a
+    countdowntimer.timer.internal.SubMode getSubMode() -> a
+    void beginStopwatchMode() -> v
+    void access$100(countdowntimer.timer.internal.CountdownTimerImpl) -> b
+countdowntimer.timer.internal.CountdownTimerImpl$1 -> aW:
+    countdowntimer.timer.internal.CountdownTimerImpl this$0 -> a
+    void onPreferencesChanged() -> b_
+countdowntimer.timer.internal.CountdownTimerImpl$2 -> aU:
+    int[] $SwitchMap$countdowntimer$timer$internal$Mode -> a
+countdowntimer.timer.internal.CountdownTimerImpl$MyCountdownTimer -> dP:
+    countdowntimer.timer.internal.CountdownTimerImpl this$0 -> a
+    void run() -> run
+countdowntimer.timer.internal.CountdownTimerImpl$MyCountdownTimer$1 -> X:
+    countdowntimer.timer.internal.CountdownTimerImpl$MyCountdownTimer this$1 -> a
+    void run() -> run
+countdowntimer.timer.internal.Mode -> aV:
+    countdowntimer.timer.internal.Mode COUNTDOWN -> a
+    countdowntimer.timer.internal.Mode STOPWATCH -> b
+    countdowntimer.timer.internal.Mode TIME -> c
+    countdowntimer.timer.internal.Mode[] $VALUES -> a
+    countdowntimer.timer.internal.Mode[] values() -> values
+    countdowntimer.timer.internal.Mode valueOf(java.lang.String) -> valueOf
+countdowntimer.timer.internal.SubMode -> cL:
+    countdowntimer.timer.internal.SubMode STOP -> a
+    countdowntimer.timer.internal.SubMode STICKY -> b
+    countdowntimer.timer.internal.SubMode LOOP -> c
+    countdowntimer.timer.internal.SubMode OVERRUN -> d
+    countdowntimer.timer.internal.SubMode[] $VALUES -> a
+    countdowntimer.timer.internal.SubMode[] values() -> values
+    countdowntimer.timer.internal.SubMode valueOf(java.lang.String) -> valueOf
+countdowntimer.timer.internal.TickingCountdownImpl -> cf:
+    long latestStartedTime -> a
+    long tenthsUsedAlready -> b
+    long totalSecondsToCount -> c
+    boolean ticking -> a
+    java.lang.String description -> a
+    int id -> a
+    void programTimer$207a8713(countdowntimer.timer.internal.CountdownTimerImpl) -> a
+    void onStarted$207a8713() -> a
+    void onStopped$207a8713(countdowntimer.timer.internal.CountdownTimerImpl) -> b
+    void setTargetSeconds(long) -> a
+    void reset() -> b
+    void storeInPrefs() -> d
+    void log() -> c
+countdowntimer.tweaks.LabelAnimator -> eG:
+    javax.swing.Timer labelTimer -> a
+    java.util.Map normalColor -> a
+    java.util.Map desiredColor -> b
+    void onTimerFired() -> a
+    boolean changeColorTowardsDesired(javax.swing.JLabel,java.awt.Color) -> a
+    int scaleColor(int,int) -> a
+    void resetLabelColors() -> b
+    void fadeOut() -> c
+    void setTargetColor(javax.swing.JLabel,java.awt.Color) -> a
+    void setNormalColor(javax.swing.JLabel,java.awt.Color) -> b
+    void queueLabelForColorChange(javax.swing.JLabel,java.awt.Color) -> c
+countdowntimer.tweaks.LabelAnimator$1 -> V:
+    countdowntimer.tweaks.LabelAnimator this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.tweaks.Messages -> dS:
+    java.util.ResourceBundle RESOURCE_BUNDLE -> a
+    java.lang.String getString(java.lang.String) -> a
+countdowntimer.tweaks.TweakConstants -> fS:
+    java.lang.String HOVER_HELP -> a
+    java.lang.String LAYOUT_TITLES -> b
+    java.lang.String FADE_BUTTONS -> c
+    java.lang.String COLOR_THEME -> d
+    java.lang.String PERFORMANCE -> e
+    java.lang.String DIGIT_TITLES -> f
+    java.lang.String CLOSE_BUTTONS -> g
+    java.lang.String GAMMA -> h
+    java.lang.String DIGIT_RATIO -> i
+countdowntimer.tweaks.TweakPanel -> eI:
+    java.awt.Font tweakFont -> a
+    java.awt.Font tweakFontSmall -> b
+    countdowntimer.tweaks.LabelAnimator animator -> a
+    countdowntimer.tweaks.TweakPanel$TweakMouseTracker mouseListener -> a
+    countdowntimer.tweaks.TweakPanelControl tweakPanelControl -> a
+    void init() -> b
+    void trackMouseLeaving() -> c
+    void addTitle(java.lang.String) -> a
+    void addTweak(java.lang.String) -> b
+    void hookLabel(javax.swing.JLabel,javax.swing.JLabel,java.lang.String) -> a
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    javax.swing.JPanel createPair(javax.swing.JComponent,javax.swing.JComponent) -> a
+    void closePanel() -> a
+    void fadeOutPanel() -> d
+    void notifyPanelClosed() -> e
+    countdowntimer.tweaks.LabelAnimator access$100(countdowntimer.tweaks.TweakPanel) -> a
+    void access$200(countdowntimer.tweaks.TweakPanel) -> a
+    void access$300(countdowntimer.tweaks.TweakPanel) -> b
+countdowntimer.tweaks.TweakPanel$1 -> bR:
+    java.lang.String val$tweakName -> a
+    javax.swing.JLabel val$value -> a
+    javax.swing.JLabel val$key -> b
+    countdowntimer.tweaks.TweakPanel this$0 -> a
+    void mouseClicked(java.awt.event.MouseEvent) -> mouseClicked
+    void mouseEntered(java.awt.event.MouseEvent) -> mouseEntered
+    void mouseExited(java.awt.event.MouseEvent) -> mouseExited
+countdowntimer.tweaks.TweakPanel$2 -> bQ:
+    countdowntimer.tweaks.TweakPanel this$0 -> a
+    void run() -> b
+countdowntimer.tweaks.TweakPanel$TweakMouseTracker -> ek:
+    countdowntimer.tweaks.TweakPanel this$0 -> a
+    void onMouseStoppedMoving() -> a
+countdowntimer.tweaks.TweakPanelControl -> bK:
+    countdowntimer.tweaks.TweakPanel tweakPanel -> a
+    void open(javax.swing.JFrame,int,int,int,int) -> a
+    void closeExistingPanel() -> a
+    void panelClosed(countdowntimer.tweaks.TweakPanel) -> a
+countdowntimer.tweaks.TweakRegistry -> ac:
+    countdowntimer.tweaks.TweakRegistry INSTANCE -> a
+    countdowntimer.tweaks.TweakRegistry getInstance() -> a
+    boolean isRegisteredOnly(java.lang.String) -> a
+    countdowntimer.tweaks.TweakValue getValue(java.lang.String) -> a
+    countdowntimer.tweaks.TweakValue setToNextValidValue(java.lang.String) -> b
+    void applyThemeToGui() -> a
+    int getInterFrameDelay() -> a
+    float getGamma() -> a
+    int[] getCloseButtonMetrics() -> a
+    countdowntimer.tweaks.TweakValue[] getValidValues(java.lang.String) -> a
+    java.lang.String getTweakTitle(java.lang.String) -> a
+    void setGuruTweak(java.lang.String,boolean) -> a
+    boolean isGuruTweakOn(java.lang.String) -> b
+    boolean isHoverHelpEnabled() -> a
+    boolean isShowDigitTitles() -> b
+    boolean isDigitRatioFree() -> c
+    boolean isFadeButtonsDisabled() -> d
+    boolean isFadeAllEnabled() -> e
+    boolean isLayoutTitlesEnabled() -> f
+    countdowntimer.tweaks.TweakValue getColorTheme() -> a
+countdowntimer.tweaks.TweakValue -> bC:
+    countdowntimer.tweaks.TweakValue ENABLED -> a
+    countdowntimer.tweaks.TweakValue DISABLED -> b
+    countdowntimer.tweaks.TweakValue FADE_ALL -> c
+    countdowntimer.tweaks.TweakValue FADE_INACTIVE -> d
+    countdowntimer.tweaks.TweakValue FADE_NONE -> e
+    countdowntimer.tweaks.TweakValue COLOR_THEME_ALL -> f
+    countdowntimer.tweaks.TweakValue COLOR_THEME_DEFAULT -> g
+    countdowntimer.tweaks.TweakValue COLOR_THEME_RED -> h
+    countdowntimer.tweaks.TweakValue COLOR_THEME_GREEN -> i
+    countdowntimer.tweaks.TweakValue COLOR_THEME_HIGHC -> j
+    countdowntimer.tweaks.TweakValue COLOR_THEME_BLUE -> k
+    countdowntimer.tweaks.TweakValue COLOR_THEME_THEME1 -> l
+    countdowntimer.tweaks.TweakValue COLOR_THEME_THEME2 -> m
+    countdowntimer.tweaks.TweakValue PERF_NORMAL -> n
+    countdowntimer.tweaks.TweakValue PERF_LOW -> o
+    countdowntimer.tweaks.TweakValue PERF_MEDIUM -> p
+    countdowntimer.tweaks.TweakValue PERF_HIGH -> q
+    countdowntimer.tweaks.TweakValue DIGIT_SHOW -> r
+    countdowntimer.tweaks.TweakValue DIGIT_HIDE -> s
+    countdowntimer.tweaks.TweakValue CLOSE_SMALL -> t
+    countdowntimer.tweaks.TweakValue CLOSE_MEDIUM -> u
+    countdowntimer.tweaks.TweakValue CLOSE_LARGE -> v
+    countdowntimer.tweaks.TweakValue GAMMA_NORMAL -> w
+    countdowntimer.tweaks.TweakValue GAMMA_VHIGH -> x
+    countdowntimer.tweaks.TweakValue GAMMA_HIGH -> y
+    countdowntimer.tweaks.TweakValue GAMMA_MEDIUM -> z
+    countdowntimer.tweaks.TweakValue GAMMA_LOW -> A
+    countdowntimer.tweaks.TweakValue GAMMA_VLOW -> B
+    countdowntimer.tweaks.TweakValue DIGIT_RATIO_FIXED -> C
+    countdowntimer.tweaks.TweakValue DIGIT_RATIO_FREE -> D
+    java.lang.String displayName -> a
+    countdowntimer.tweaks.TweakValue[] $VALUES -> a
+    countdowntimer.tweaks.TweakValue[] values() -> values
+    countdowntimer.tweaks.TweakValue valueOf(java.lang.String) -> valueOf
+countdowntimer.update.BrowserLaunching -> cg:
+    void openURL(java.lang.String) -> a
+countdowntimer.update.BrowserLaunching$1 -> fw:
+    java.lang.String val$url -> a
+    void run() -> run
+countdowntimer.update.UpdateChecker -> eo:
+    java.lang.String updateUrl -> a
+    java.lang.String VERSION -> b
+    void asyncFindCurrentVersion$45a55b7c(countdowntimer.CountdownWindow$5) -> a
+    void asyncJustRegisteredCheckCurrentVersion() -> a
+    java.lang.String readPage(java.lang.String) -> b
+    java.lang.String access$000() -> a
+    java.lang.String access$100(java.lang.String) -> a
+    java.lang.String access$200() -> b
+countdowntimer.update.UpdateChecker$1 -> bH:
+    countdowntimer.CountdownWindow$5 val$listener$10d975e1 -> a
+    void run() -> run
+countdowntimer.update.UpdateChecker$2 -> bI:
+    void run() -> run
+countdowntimer.util.TimedRunner -> L:
+    javax.swing.Timer simpleTimer -> a
+    java.util.List tasks -> a
+    countdowntimer.util.TimedRunner INSTANCE -> a
+    countdowntimer.util.TimedRunner getInstance() -> a
+    void startTimer() -> b
+    void stopTimer() -> c
+    void onTimerFired() -> a
+    void run(countdowntimer.util.TimedTask) -> a
+countdowntimer.util.TimedRunner$1 -> aX:
+    countdowntimer.util.TimedRunner this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+countdowntimer.util.TimedTask -> aZ:
+    long started -> a
+    float seconds -> a
+    boolean stopped -> a
+    void stop() -> a
+    void run() -> b
+    void tick() -> c
+countdowntimer.visualiser.CircleTimeVisualiser -> dc:
+    long countdownTenths -> a
+    long countdownHundreths -> b
+    long targetSeconds -> c
+    long segments -> d
+    int segCounter -> a
+    boolean animatingSegments -> c
+    int segIntervalCounter -> b
+    void flash(boolean) -> a
+    void reset() -> a
+    void setTicking(boolean) -> c
+    void setCountdownTimeRemaining(int,long,long) -> a
+    void setTargetSeconds(long) -> a
+    void updateDisplay(boolean) -> d
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    void paintCompoundCircle(java.awt.Graphics) -> a
+    java.awt.Rectangle computeDamage() -> a
+    java.awt.Rectangle makeRectangle(int,int,int,int,int) -> a
+countdowntimer.visualiser.SingleTimeBarVisualiserPanel -> fY:
+    java.text.DecimalFormat df -> a
+    boolean flash -> c
+    long countdownHundreths -> a
+    long targetSeconds -> b
+    long segments -> c
+    double digitHeight -> a
+    double redRatio -> b
+    double amberRatio -> c
+    int mouseX -> a
+    boolean redBarNearestMouse -> d
+    countdowntimer.preferences.TimerPreferenceImpl timerPref$319e0941 -> a
+    boolean trackMouseAndDrawBar -> e
+    void globalDisableMouseMonitoring() -> b
+    void globalEnableMouseMonitoring() -> c
+    void onMouseMoved$255f295(int) -> a
+    void onMouseClicked$255f295() -> d
+    boolean isRedNearestMouse() -> b
+    void onMetricUpdated(java.lang.String,double) -> a
+    void flash(boolean) -> a
+    void reset() -> a
+    void setCountdownTimeRemaining(int,long,long) -> a
+    void setTargetSeconds(long) -> a
+    void paintComponent(java.awt.Graphics) -> paintComponent
+    java.awt.font.GlyphVector[] createGVsForTime(java.awt.Graphics2D,java.awt.Font,double) -> a
+    void drawText(java.awt.Graphics2D,java.awt.font.GlyphVector,java.awt.font.GlyphVector,float,float,boolean) -> a
+    java.awt.image.BufferedImage getBarImage(int) -> a
+    boolean access$000() -> a
+    int access$102(countdowntimer.visualiser.SingleTimeBarVisualiserPanel,int) -> a
+countdowntimer.visualiser.SingleTimeBarVisualiserPanel$1 -> ea:
+    countdowntimer.visualiser.SingleTimeBarVisualiserPanel this$0 -> a
+    void mouseClicked(java.awt.event.MouseEvent) -> mouseClicked
+    void mouseExited(java.awt.event.MouseEvent) -> mouseExited
+countdowntimer.visualiser.SingleTimeBarVisualiserPanel$2 -> dW:
+    countdowntimer.visualiser.SingleTimeBarVisualiserPanel this$0 -> a
+    void mouseMoved(java.awt.event.MouseEvent) -> mouseMoved
+countdowntimer.visualiser.SwitchableTimerPanel -> g:
+    java.util.List allPanels -> a
+    blingclock.visualiser.VisualiserPanel current -> a
+    boolean lastFlash -> c
+    int lastCountDownDays -> a
+    long lastCountDownHundreths -> a
+    long lastCountDownTenths -> b
+    long lastTargetSeconds -> c
+    void addListeners() -> b
+    void showPanel(int) -> a
+    void flash(boolean) -> a
+    void reset() -> a
+    void setShowNeedsRegistered(boolean) -> b
+    void setCountdownTimeRemaining(int,long,long) -> a
+    void setTargetSeconds(long) -> a
+    blingclock.visualiser.TimeSelectionListener access$000(countdowntimer.visualiser.SwitchableTimerPanel) -> a
+    blingclock.visualiser.TimeSelectionListener access$100(countdowntimer.visualiser.SwitchableTimerPanel) -> b
+    java.util.List access$200(countdowntimer.visualiser.SwitchableTimerPanel) -> a
+countdowntimer.visualiser.SwitchableTimerPanel$1 -> aT:
+    countdowntimer.visualiser.SwitchableTimerPanel this$0 -> a
+    void onSelected(int,int) -> a
+countdowntimer.visualiser.SwitchableTimerPanel$2 -> aL:
+    countdowntimer.visualiser.SwitchableTimerPanel this$0 -> a
+    void componentResized(java.awt.event.ComponentEvent) -> componentResized
+d3bug.licensing.Base64 -> ce:
+    byte[] _STANDARD_ALPHABET -> a
+    byte[] _STANDARD_DECODABET -> b
+    byte[] _URL_SAFE_ALPHABET -> c
+    byte[] _URL_SAFE_DECODABET -> d
+    byte[] _ORDERED_ALPHABET -> e
+    byte[] _ORDERED_DECODABET -> f
+    byte[] getAlphabet(int) -> b
+    byte[] getDecodabet(int) -> c
+    byte[] encode3to4(byte[],byte[],int,int) -> b
+    byte[] encode3to4(byte[],int,int,byte[],int,int) -> a
+    java.lang.String encodeBytes(byte[]) -> a
+    java.lang.String encodeBytes(byte[],int,int,int) -> a
+    int decode4to3(byte[],int,byte[],int,int) -> b
+    byte[] decode(byte[],int,int,int) -> a
+    byte[] decode(java.lang.String) -> a
+    byte[] decode(java.lang.String,int) -> a
+    byte[] access$100(int) -> a
+    int access$300(byte[],int,byte[],int,int) -> a
+    byte[] access$400(byte[],byte[],int,int) -> a
+d3bug.licensing.Base64$OutputStream -> dR:
+    boolean encode -> a
+    int position -> a
+    byte[] buffer -> a
+    int bufferLength -> b
+    int lineLength -> c
+    boolean breakLines -> b
+    byte[] b4 -> b
+    boolean suspendEncoding -> c
+    int options -> d
+    byte[] decodabet -> c
+    void write(int) -> write
+    void write(byte[],int,int) -> write
+    void flushBase64() -> a
+    void close() -> close
+d3bug.licensing.SimpleRegistration -> de:
+    java.lang.String name -> a
+    java.lang.String email -> b
+    java.lang.String special1 -> c
+    java.lang.String special2 -> d
+    boolean valid -> a
+    void restoreFrom$4ce1e693(d3bug.licensing.client.SignedStringLicenseValidator) -> a
+d3bug.licensing.client.SignedStringLicenseValidator -> db:
+    java.lang.StringBuilder bits -> a
+    int ix -> a
+    java.lang.String readString() -> a
+    char readChar() -> a
+    int readTiny() -> a
+    boolean readBit() -> b
+    boolean verifySignature() -> a
+javazoom.jl.decoder.BitReserve -> es:
+    int offset -> b
+    int totbit -> a
+    int buf_byte_idx -> c
+    int[] buf -> a
+    int hgetbits(int) -> a
+    int hget1bit() -> a
+    void hputbuf(int) -> a
+    void rewindNbits(int) -> b
+    void rewindNbytes(int) -> c
+javazoom.jl.decoder.Bitstream -> cs:
+    byte INITIAL_SYNC -> a
+    byte STRICT_SYNC -> b
+    int[] framebuffer -> a
+    int framesize -> a
+    byte[] frame_bytes -> a
+    int wordpointer -> b
+    int bitindex -> c
+    int syncword -> d
+    boolean single_ch_mode -> a
+    int[] bitmask -> b
+    java.io.PushbackInputStream source -> a
+    javazoom.jl.decoder.Header header -> a
+    byte[] syncbuf -> b
+    javazoom.jl.decoder.Crc16[] crc -> a
+    byte[] rawid3v2 -> c
+    boolean firstframe -> b
+    void loadID3v2(java.io.InputStream) -> a
+    int readID3v2Header(java.io.InputStream) -> a
+    void close() -> a
+    javazoom.jl.decoder.Header readFrame() -> a
+    javazoom.jl.decoder.Header readNextFrame() -> b
+    void nextFrame() -> e
+    void unreadFrame() -> b
+    void closeFrame() -> c
+    boolean isSyncCurrentPosition(int) -> a
+    javazoom.jl.decoder.BitstreamException newBitstreamException(int) -> a
+    javazoom.jl.decoder.BitstreamException newBitstreamException(int,java.lang.Throwable) -> a
+    int syncHeader(byte) -> a
+    boolean isSyncMark(int,int,int) -> a
+    int read_frame_data(int) -> a
+    void parse_frame() -> d
+    int get_bits(int) -> b
+    void set_syncword(int) -> a
+    int readFully(byte[],int,int) -> a
+    int readBytes(byte[],int,int) -> b
+javazoom.jl.decoder.BitstreamException -> aY:
+    int errorcode -> a
+    java.lang.String getErrorString(int) -> a
+javazoom.jl.decoder.Crc16 -> b:
+    short polynomial -> a
+    short crc -> b
+    void add_bits(int,int) -> a
+    short checksum() -> a
+javazoom.jl.decoder.Decoder -> au:
+    javazoom.jl.decoder.Decoder$Params DEFAULT_PARAMS -> a
+    javazoom.jl.decoder.Obuffer output -> a
+    javazoom.jl.decoder.SynthesisFilter filter1 -> a
+    javazoom.jl.decoder.SynthesisFilter filter2 -> b
+    javazoom.jl.decoder.LayerIIIDecoder l3decoder -> a
+    javazoom.jl.decoder.LayerIIDecoder l2decoder -> a
+    javazoom.jl.decoder.LayerIDecoder l1decoder -> a
+    int outputFrequency -> a
+    int outputChannels -> b
+    javazoom.jl.decoder.Equalizer equalizer -> a
+    javazoom.jl.decoder.Decoder$Params params -> b
+    boolean initialized -> a
+    javazoom.jl.decoder.Obuffer decodeFrame(javazoom.jl.decoder.Header,javazoom.jl.decoder.Bitstream) -> a
+    javazoom.jl.decoder.DecoderException newDecoderException(int,java.lang.Throwable) -> a
+    javazoom.jl.decoder.FrameDecoder retrieveDecoder(javazoom.jl.decoder.Header,javazoom.jl.decoder.Bitstream,int) -> a
+    void initialize(javazoom.jl.decoder.Header) -> a
+javazoom.jl.decoder.Decoder$Params -> A:
+    javazoom.jl.decoder.Equalizer equalizer -> a
+    java.lang.Object clone() -> clone
+javazoom.jl.decoder.DecoderException -> cj:
+    java.lang.String getErrorString(int) -> a
+javazoom.jl.decoder.Equalizer -> fP:
+    float[] settings -> a
+    void setFrom(float[]) -> a
+    void setFrom(javazoom.jl.decoder.Equalizer) -> a
+    void reset() -> a
+    float limit(float) -> a
+    float[] getBandFactors() -> a
+    float getBandFactor(float) -> b
+javazoom.jl.decoder.FrameDecoder -> cU:
+    void decodeFrame() -> a
+javazoom.jl.decoder.Header -> cC:
+    int[][] frequencies -> a
+    int h_layer -> a
+    int h_protection_bit -> k
+    int h_bitrate_index -> b
+    int h_padding_bit -> l
+    int h_mode_extension -> c
+    int h_version -> d
+    int h_mode -> e
+    int h_sample_frequency -> f
+    int h_number_of_subbands -> g
+    int h_intensity_stereo_bound -> h
+    double[] h_vbr_time_per_frame -> a
+    boolean h_vbr -> a
+    int h_vbr_frames -> m
+    int h_vbr_bytes -> n
+    byte[] h_vbr_toc -> a
+    byte syncmode -> a
+    javazoom.jl.decoder.Crc16 crc -> a
+    short checksum -> a
+    int framesize -> i
+    int nSlots -> j
+    int[][][] bitrates -> a
+    java.lang.String[][][] bitrate_str -> a
+    java.lang.String toString() -> toString
+    void read_header(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Crc16[]) -> a
+    void parseVBR(byte[]) -> a
+    int frequency() -> a
+    boolean checksums() -> b
+    boolean checksum_ok() -> a
+    int calculate_framesize() -> b
+    float ms_per_frame() -> a
+    java.lang.String layer_string() -> a
+    java.lang.String bitrate_string() -> b
+    int bitrate() -> c
+    java.lang.String sample_frequency_string() -> c
+    java.lang.String mode_string() -> d
+    java.lang.String version_string() -> e
+javazoom.jl.decoder.JavaLayerException -> al:
+    java.lang.Throwable exception -> a
+    void printStackTrace() -> printStackTrace
+    void printStackTrace(java.io.PrintStream) -> printStackTrace
+javazoom.jl.decoder.JavaLayerHook -> cJ:
+    java.io.InputStream getResourceAsStream$57f5087e() -> a
+javazoom.jl.decoder.JavaLayerUtils -> fG:
+    javazoom.jl.decoder.JavaLayerHook hook -> a
+    java.lang.Object deserialize(java.io.InputStream) -> a
+    java.lang.Object deserializeArray(java.io.InputStream,java.lang.Class,int) -> a
+    java.lang.Object deserializeArrayResource(java.lang.String,java.lang.Class,int) -> a
+    java.io.InputStream getResourceAsStream(java.lang.String) -> a
+javazoom.jl.decoder.LayerIDecoder -> Y:
+    javazoom.jl.decoder.Bitstream stream -> a
+    javazoom.jl.decoder.Header header -> a
+    javazoom.jl.decoder.SynthesisFilter filter1 -> a
+    javazoom.jl.decoder.SynthesisFilter filter2 -> b
+    javazoom.jl.decoder.Obuffer buffer -> a
+    int which_channels -> a
+    int mode -> b
+    int num_subbands -> c
+    javazoom.jl.decoder.LayerIDecoder$Subband[] subbands -> a
+    javazoom.jl.decoder.Crc16 crc -> a
+    void create(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Header,javazoom.jl.decoder.SynthesisFilter,javazoom.jl.decoder.SynthesisFilter,javazoom.jl.decoder.Obuffer,int) -> a
+    void decodeFrame() -> a
+    void createSubbands() -> b
+    void readAllocation() -> c
+    void readScaleFactorSelection() -> d
+    void readScaleFactors() -> e
+    void readSampleData() -> f
+javazoom.jl.decoder.LayerIDecoder$Subband -> ai:
+    float[] scalefactors -> a
+    void read_allocation(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Header,javazoom.jl.decoder.Crc16) -> a
+    void read_scalefactor(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Header) -> a
+    boolean read_sampledata(javazoom.jl.decoder.Bitstream) -> a
+    boolean put_next_sample(int,javazoom.jl.decoder.SynthesisFilter,javazoom.jl.decoder.SynthesisFilter) -> a
+javazoom.jl.decoder.LayerIDecoder$SubbandLayer1 -> fM:
+    float[] table_factor -> b
+    float[] table_offset -> c
+    int subbandnumber -> c
+    int samplenumber -> d
+    int allocation -> e
+    float scalefactor -> e
+    int samplelength -> f
+    float sample -> f
+    float factor -> g
+    float offset -> h
+    void read_allocation(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Header,javazoom.jl.decoder.Crc16) -> a
+    void read_scalefactor(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Header) -> a
+    boolean read_sampledata(javazoom.jl.decoder.Bitstream) -> a
+    boolean put_next_sample(int,javazoom.jl.decoder.SynthesisFilter,javazoom.jl.decoder.SynthesisFilter) -> a
+javazoom.jl.decoder.LayerIDecoder$SubbandLayer1IntensityStereo -> eK:
+    float channel2_scalefactor -> a
+    void read_allocation(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Header,javazoom.jl.decoder.Crc16) -> a
+    void read_scalefactor(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Header) -> a
+    boolean read_sampledata(javazoom.jl.decoder.Bitstream) -> a
+    boolean put_next_sample(int,javazoom.jl.decoder.SynthesisFilter,javazoom.jl.decoder.SynthesisFilter) -> a
+javazoom.jl.decoder.LayerIDecoder$SubbandLayer1Stereo -> dE:
+    int channel2_allocation -> a
+    float channel2_scalefactor -> a
+    int channel2_samplelength -> b
+    float channel2_sample -> b
+    float channel2_factor -> c
+    float channel2_offset -> d
+    void read_allocation(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Header,javazoom.jl.decoder.Crc16) -> a
+    void read_scalefactor(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Header) -> a
+    boolean read_sampledata(javazoom.jl.decoder.Bitstream) -> a
+    boolean put_next_sample(int,javazoom.jl.decoder.SynthesisFilter,javazoom.jl.decoder.SynthesisFilter) -> a
+javazoom.jl.decoder.LayerIIDecoder -> do:
+    void createSubbands() -> b
+    void readScaleFactorSelection() -> d
+javazoom.jl.decoder.LayerIIDecoder$SubbandLayer2 -> fN:
+    float[] grouping_5bits -> f
+    float[] grouping_7bits -> g
+    float[] grouping_10bits -> h
+    int[] table_ab1_codelength -> b
+    float[][] table_ab1_groupingtables -> a
+    float[] table_ab1_factor -> i
+    float[] table_ab1_c -> j
+    float[] table_ab1_d -> k
+    float[][] table_ab234_groupingtables -> b
+    int[] table_ab2_codelength -> c
+    float[] table_ab2_factor -> l
+    float[] table_ab2_c -> m
+    float[] table_ab2_d -> n
+    int[] table_ab3_codelength -> d
+    float[] table_ab3_factor -> o
+    float[] table_ab3_c -> p
+    float[] table_ab3_d -> q
+    int[] table_ab4_codelength -> e
+    float[] table_ab4_factor -> r
+    float[] table_ab4_c -> s
+    float[] table_ab4_d -> t
+    int[] table_cd_codelength -> f
+    float[][] table_cd_groupingtables -> c
+    float[] table_cd_factor -> u
+    float[] table_cd_c -> v
+    float[] table_cd_d -> w
+    int subbandnumber -> c
+    int allocation -> d
+    int scfsi -> e
+    float scalefactor1 -> d
+    float scalefactor2 -> e
+    float scalefactor3 -> f
+    int[] codelength -> g
+    float[][] groupingtable -> d
+    float[] factor -> x
+    int groupnumber -> f
+    int samplenumber -> g
+    float[] samples -> y
+    float[] c -> z
+    float[] d -> A
+    int get_allocationlength(javazoom.jl.decoder.Header) -> a
+    void prepare_sample_reading(javazoom.jl.decoder.Header,int,int,float[],int[],float[],float[]) -> a
+    void read_allocation(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Header,javazoom.jl.decoder.Crc16) -> a
+    void read_scalefactor_selection(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Crc16) -> a
+    void read_scalefactor(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Header) -> a
+    boolean read_sampledata(javazoom.jl.decoder.Bitstream) -> a
+    boolean put_next_sample(int,javazoom.jl.decoder.SynthesisFilter,javazoom.jl.decoder.SynthesisFilter) -> a
+javazoom.jl.decoder.LayerIIDecoder$SubbandLayer2IntensityStereo -> en:
+    int channel2_scfsi -> a
+    float channel2_scalefactor1 -> a
+    float channel2_scalefactor2 -> b
+    float channel2_scalefactor3 -> c
+    void read_allocation(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Header,javazoom.jl.decoder.Crc16) -> a
+    void read_scalefactor_selection(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Crc16) -> a
+    void read_scalefactor(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Header) -> a
+    boolean read_sampledata(javazoom.jl.decoder.Bitstream) -> a
+    boolean put_next_sample(int,javazoom.jl.decoder.SynthesisFilter,javazoom.jl.decoder.SynthesisFilter) -> a
+javazoom.jl.decoder.LayerIIDecoder$SubbandLayer2Stereo -> ex:
+    int channel2_allocation -> a
+    int channel2_scfsi -> b
+    float channel2_scalefactor1 -> a
+    float channel2_scalefactor2 -> b
+    float channel2_scalefactor3 -> c
+    int[] channel2_codelength -> a
+    float[] channel2_factor -> b
+    float[] channel2_samples -> c
+    float[] channel2_c -> d
+    float[] channel2_d -> e
+    void read_allocation(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Header,javazoom.jl.decoder.Crc16) -> a
+    void read_scalefactor_selection(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Crc16) -> a
+    void read_scalefactor(javazoom.jl.decoder.Bitstream,javazoom.jl.decoder.Header) -> a
+    boolean read_sampledata(javazoom.jl.decoder.Bitstream) -> a
+    boolean put_next_sample(int,javazoom.jl.decoder.SynthesisFilter,javazoom.jl.decoder.SynthesisFilter) -> a
+javazoom.jl.decoder.LayerIIIDecoder -> O:
+    int[] scalefac_buffer -> a
+    int CheckSumHuff -> a
+    int[] is_1d -> h
+    float[][][] ro -> a
+    float[][][] lr -> b
+    float[] out_1d -> g
+    float[][] prevblck -> c
+    float[][] k -> d
+    int[] nonzero -> i
+    javazoom.jl.decoder.Bitstream stream -> a
+    javazoom.jl.decoder.Header header -> a
+    javazoom.jl.decoder.SynthesisFilter filter1 -> a
+    javazoom.jl.decoder.SynthesisFilter filter2 -> b
+    javazoom.jl.decoder.Obuffer buffer -> a
+    int which_channels -> b
+    javazoom.jl.decoder.BitReserve br -> a
+    javazoom.jl.decoder.LayerIIIDecoder$III_side_info_t si -> a
+    javazoom.jl.decoder.LayerIIIDecoder$temporaire2[] III_scalefac_t -> a
+    javazoom.jl.decoder.LayerIIIDecoder$temporaire2[] scalefac -> b
+    int max_gr -> c
+    int frame_start -> d
+    int part2_start -> e
+    int channels -> f
+    int first_channel -> g
+    int last_channel -> h
+    int sfreq -> i
+    float[] samples1 -> h
+    float[] samples2 -> i
+    int[] new_slen -> j
+    int[] x -> b
+    int[] y -> c
+    int[] v -> d
+    int[] w -> e
+    int[] is_pos -> f
+    float[] is_ratio -> a
+    float[] tsOutCopy -> b
+    float[] rawout -> c
+    int counter -> j
+    int[][] slen -> a
+    int[] pretab -> g
+    javazoom.jl.decoder.LayerIIIDecoder$SBI[] sfBandIndex -> a
+    float[] two_to_negative_half_pow -> d
+    float[] t_43 -> e
+    float[][] io -> a
+    float[] TAN12 -> f
+    int[][] reorder_table -> b
+    float[] cs -> j
+    float[] ca -> k
+    float[][] win -> b
+    int[][][] nr_of_sfb_block -> a
+    void decodeFrame() -> a
+    void decode() -> b
+    boolean get_side_info() -> a
+    void get_scale_factors(int,int) -> a
+    void get_LSF_scale_data(int,int) -> b
+    void get_LSF_scale_factors(int,int) -> c
+    void huffman_decode(int,int) -> d
+    void i_stereo_k_values(int,int,int) -> a
+    void dequantize_sample(float[][],int,int) -> a
+    void reorder(float[][],int,int) -> b
+    void stereo(int) -> a
+    void antialias(int,int) -> e
+    void hybrid(int,int) -> f
+    void do_downmix() -> c
+    void inv_mdct(float[],float[],int) -> a
+    float[] create_t_43() -> a
+    int[] reorder(int[]) -> a
+javazoom.jl.decoder.LayerIIIDecoder$III_side_info_t -> eB:
+    int main_data_begin -> a
+    javazoom.jl.decoder.LayerIIIDecoder$temporaire[] ch -> a
+javazoom.jl.decoder.LayerIIIDecoder$SBI -> dU:
+    int[] l -> a
+    int[] s -> b
+javazoom.jl.decoder.LayerIIIDecoder$Sftable -> cb:
+javazoom.jl.decoder.LayerIIIDecoder$gr_info_s -> cP:
+    int part2_3_length -> a
+    int big_values -> b
+    int global_gain -> c
+    int scalefac_compress -> d
+    int window_switching_flag -> e
+    int block_type -> f
+    int mixed_block_flag -> g
+    int[] table_select -> a
+    int[] subblock_gain -> b
+    int region0_count -> h
+    int region1_count -> i
+    int preflag -> j
+    int scalefac_scale -> k
+    int count1table_select -> l
+javazoom.jl.decoder.LayerIIIDecoder$temporaire -> cv:
+    int[] scfsi -> a
+    javazoom.jl.decoder.LayerIIIDecoder$gr_info_s[] gr -> a
+javazoom.jl.decoder.LayerIIIDecoder$temporaire2 -> dv:
+    int[] l -> a
+    int[][] s -> a
+javazoom.jl.decoder.Obuffer -> eN:
+    void append(int,short) -> a
+    void appendSamples(int,float[]) -> a
+    short clip(float) -> a
+    void clear_buffer() -> a
+javazoom.jl.decoder.SampleBuffer -> u:
+    short[] buffer -> a
+    int[] bufferp -> a
+    int channels -> a
+    int getBufferLength() -> a
+    void append(int,short) -> a
+    void appendSamples(int,float[]) -> a
+    void clear_buffer() -> a
+javazoom.jl.decoder.SynthesisFilter -> fO:
+    float[] v1 -> a
+    float[] v2 -> b
+    float[] actual_v -> c
+    int actual_write_pos -> a
+    float[] samples -> d
+    int channel -> b
+    float scalefactor -> a
+    float[] eq -> e
+    float[] _tmpOut -> f
+    float cos1_64 -> b
+    float cos3_64 -> c
+    float cos5_64 -> d
+    float cos7_64 -> e
+    float cos9_64 -> f
+    float cos11_64 -> g
+    float cos13_64 -> h
+    float cos15_64 -> i
+    float cos17_64 -> j
+    float cos19_64 -> k
+    float cos21_64 -> l
+    float cos23_64 -> m
+    float cos25_64 -> n
+    float cos27_64 -> o
+    float cos29_64 -> p
+    float cos31_64 -> q
+    float cos1_32 -> r
+    float cos3_32 -> s
+    float cos5_32 -> t
+    float cos7_32 -> u
+    float cos9_32 -> v
+    float cos11_32 -> w
+    float cos13_32 -> x
+    float cos15_32 -> y
+    float cos1_16 -> z
+    float cos3_16 -> A
+    float cos5_16 -> B
+    float cos7_16 -> C
+    float cos1_8 -> D
+    float cos3_8 -> E
+    float cos1_4 -> F
+    float[] d -> g
+    float[][] d16 -> a
+    void setEQ(float[]) -> b
+    void reset() -> a
+    void input_sample(float,int) -> a
+    void input_samples(float[]) -> a
+    void compute_new_v() -> b
+    void compute_pcm_samples0$1e784bc5() -> c
+    void compute_pcm_samples1$1e784bc5() -> d
+    void compute_pcm_samples2$1e784bc5() -> e
+    void compute_pcm_samples3$1e784bc5() -> f
+    void compute_pcm_samples4$1e784bc5() -> g
+    void compute_pcm_samples5$1e784bc5() -> h
+    void compute_pcm_samples6$1e784bc5() -> i
+    void compute_pcm_samples7$1e784bc5() -> j
+    void compute_pcm_samples8$1e784bc5() -> k
+    void compute_pcm_samples9$1e784bc5() -> l
+    void compute_pcm_samples10$1e784bc5() -> m
+    void compute_pcm_samples11$1e784bc5() -> n
+    void compute_pcm_samples12$1e784bc5() -> o
+    void compute_pcm_samples13$1e784bc5() -> p
+    void compute_pcm_samples14$1e784bc5() -> q
+    void compute_pcm_samples15$1e784bc5() -> r
+    void compute_pcm_samples(javazoom.jl.decoder.Obuffer) -> b
+    void calculate_pcm_samples(javazoom.jl.decoder.Obuffer) -> a
+    float[] load_d() -> a
+    float[][] splitArray(float[],int) -> a
+    float[] subArray(float[],int,int) -> a
+javazoom.jl.decoder.huffcodetab -> ak:
+    char tablename0 -> a
+    char tablename1 -> b
+    int xlen -> a
+    int ylen -> b
+    int linbits -> c
+    int[][] val -> a
+    int treelen -> d
+    int[][] ValTab0 -> b
+    int[][] ValTab1 -> c
+    int[][] ValTab2 -> d
+    int[][] ValTab3 -> e
+    int[][] ValTab4 -> f
+    int[][] ValTab5 -> g
+    int[][] ValTab6 -> h
+    int[][] ValTab7 -> i
+    int[][] ValTab8 -> j
+    int[][] ValTab9 -> k
+    int[][] ValTab10 -> l
+    int[][] ValTab11 -> m
+    int[][] ValTab12 -> n
+    int[][] ValTab13 -> o
+    int[][] ValTab14 -> p
+    int[][] ValTab15 -> q
+    int[][] ValTab16 -> r
+    int[][] ValTab24 -> s
+    int[][] ValTab32 -> t
+    int[][] ValTab33 -> u
+    javazoom.jl.decoder.huffcodetab[] ht -> a
+    int huffman_decoder(javazoom.jl.decoder.huffcodetab,int[],int[],int[],int[],javazoom.jl.decoder.BitReserve) -> a
+    void inithuff() -> a
+javazoom.jl.player.AudioDevice -> bJ:
+    void open(javazoom.jl.decoder.Decoder) -> a
+    void write(short[],int,int) -> a
+    void close() -> a
+    void flush() -> b
+    int getPosition() -> a
+javazoom.jl.player.AudioDeviceBase -> eq:
+    boolean open -> a
+    javazoom.jl.decoder.Decoder decoder -> a
+    void open(javazoom.jl.decoder.Decoder) -> a
+    void close() -> a
+    void closeImpl() -> c
+    void write(short[],int,int) -> a
+    void writeImpl(short[],int,int) -> b
+    void flush() -> b
+    void flushImpl() -> d
+javazoom.jl.player.AudioDeviceFactory -> bo:
+    javazoom.jl.player.AudioDevice createAudioDevice() -> a
+    javazoom.jl.player.AudioDevice instantiate(java.lang.ClassLoader,java.lang.String) -> a
+javazoom.jl.player.FactoryRegistry -> ck:
+    javazoom.jl.player.FactoryRegistry instance -> a
+    java.util.Hashtable factories -> a
+    javazoom.jl.player.FactoryRegistry systemRegistry() -> a
+    void addFactory(javazoom.jl.player.AudioDeviceFactory) -> a
+    javazoom.jl.player.AudioDevice createAudioDevice() -> a
+    javazoom.jl.player.AudioDeviceFactory[] getFactoriesPriority() -> a
+    void registerDefaultFactories() -> a
+javazoom.jl.player.JavaSoundAudioDevice -> dJ:
+    javax.sound.sampled.SourceDataLine source -> a
+    javax.sound.sampled.AudioFormat fmt -> a
+    byte[] byteBuf -> a
+    javax.sound.sampled.AudioFormat getAudioFormat() -> a
+    javax.sound.sampled.DataLine$Info getSourceLineInfo() -> a
+    void open(javax.sound.sampled.AudioFormat) -> a
+    void createSource() -> f
+    void closeImpl() -> c
+    void writeImpl(short[],int,int) -> b
+    byte[] getByteArray(int) -> a
+    byte[] toByteArray(short[],int,int) -> a
+    void flushImpl() -> d
+    int getPosition() -> a
+    void test() -> e
+javazoom.jl.player.JavaSoundAudioDeviceFactory -> bz:
+    boolean tested -> a
+    javazoom.jl.player.AudioDevice createAudioDevice() -> a
+    javazoom.jl.player.JavaSoundAudioDevice createAudioDeviceImpl() -> a
+    void testAudioDevice() -> a
+javazoom.jl.player.Player -> e:
+    javazoom.jl.decoder.Bitstream bitstream -> a
+    javazoom.jl.decoder.Decoder decoder -> a
+    javazoom.jl.player.AudioDevice audio -> a
+    boolean closed -> a
+    void play() -> a
+    boolean play(int) -> a
+    void close() -> b
+    boolean decodeFrame() -> a
+org.jdesktop.animation.timing.Animator -> cT:
+    org.jdesktop.animation.timing.TimingSource timer -> a
+    org.jdesktop.animation.timing.TimingSource swingTimer -> b
+    java.util.ArrayList targets -> a
+    long startTime -> a
+    long currentStartTime -> b
+    boolean intRepeatCount -> a
+    boolean timeToStop -> b
+    boolean hasBegun -> c
+    boolean running -> d
+    double repeatCount -> a
+    int startDelay -> a
+    org.jdesktop.animation.timing.Animator$RepeatBehavior repeatBehavior -> a
+    org.jdesktop.animation.timing.Animator$EndBehavior endBehavior -> a
+    int duration -> b
+    int resolution -> c
+    float acceleration -> a
+    float deceleration -> b
+    float startFraction -> c
+    org.jdesktop.animation.timing.Animator$Direction direction -> a
+    org.jdesktop.animation.timing.interpolation.LinearInterpolator interpolator$3bdcf40b -> a
+    void setAcceleration(float) -> a
+    void setDeceleration(float) -> b
+    void addTarget(org.jdesktop.animation.timing.TimingTarget) -> a
+    void throwExceptionIfRunning() -> c
+    void setStartDelay(int) -> a
+    void start() -> a
+    void stop() -> b
+    void timingEvent(float) -> c
+    void begin() -> d
+    void end() -> e
+    void repeat() -> f
+    float timingEventPreprocessor(float) -> a
+    long getTotalElapsedTime(long) -> a
+    long getCycleElapsedTime(long) -> b
+    float getTimingFraction() -> a
+    void access$200(org.jdesktop.animation.timing.Animator,float) -> a
+    int access$300(org.jdesktop.animation.timing.Animator) -> a
+org.jdesktop.animation.timing.Animator$1 -> dL:
+    int[] $SwitchMap$org$jdesktop$animation$timing$Animator$EndBehavior -> a
+org.jdesktop.animation.timing.Animator$Direction -> Z:
+    org.jdesktop.animation.timing.Animator$Direction FORWARD -> a
+    org.jdesktop.animation.timing.Animator$Direction BACKWARD -> b
+    org.jdesktop.animation.timing.Animator$Direction[] $VALUES -> a
+    org.jdesktop.animation.timing.Animator$Direction[] values() -> values
+    org.jdesktop.animation.timing.Animator$Direction valueOf(java.lang.String) -> valueOf
+org.jdesktop.animation.timing.Animator$EndBehavior -> eP:
+    org.jdesktop.animation.timing.Animator$EndBehavior HOLD -> a
+    org.jdesktop.animation.timing.Animator$EndBehavior RESET -> b
+    org.jdesktop.animation.timing.Animator$EndBehavior[] $VALUES -> a
+    org.jdesktop.animation.timing.Animator$EndBehavior[] values() -> values
+    org.jdesktop.animation.timing.Animator$EndBehavior valueOf(java.lang.String) -> valueOf
+org.jdesktop.animation.timing.Animator$RepeatBehavior -> eu:
+    org.jdesktop.animation.timing.Animator$RepeatBehavior LOOP -> a
+    org.jdesktop.animation.timing.Animator$RepeatBehavior REVERSE -> b
+    org.jdesktop.animation.timing.Animator$RepeatBehavior[] $VALUES -> a
+    org.jdesktop.animation.timing.Animator$RepeatBehavior[] values() -> values
+    org.jdesktop.animation.timing.Animator$RepeatBehavior valueOf(java.lang.String) -> valueOf
+org.jdesktop.animation.timing.Animator$SwingTimingSource -> h:
+    javax.swing.Timer timer -> a
+    void start() -> a
+    void stop() -> b
+    void setStartDelay(int) -> a
+org.jdesktop.animation.timing.Animator$TimerTarget -> bl:
+    org.jdesktop.animation.timing.Animator this$0 -> a
+    void actionPerformed(java.awt.event.ActionEvent) -> actionPerformed
+org.jdesktop.animation.timing.TimingSource -> dM:
+    void start() -> a
+    void stop() -> b
+    void setStartDelay(int) -> a
+org.jdesktop.animation.timing.TimingTarget -> z:
+    void timingEvent(float) -> a
+    void begin() -> a
+    void end() -> b
+org.jdesktop.animation.timing.interpolation.LinearInterpolator -> ad:
+    org.jdesktop.animation.timing.interpolation.LinearInterpolator instance -> a
+    org.jdesktop.animation.timing.interpolation.LinearInterpolator getInstance() -> a
+    float interpolate(float) -> a
+org.jdesktop.layout.AquaLayoutStyle -> cD:
+    java.awt.Insets EMPTY_INSETS -> a
+    java.lang.Object[][] containerGapDefinitions -> a
+    java.lang.Object[][] relatedGapDefinitions -> b
+    java.lang.Object[][] unrelatedGapDefinitions -> c
+    java.lang.Object[][] indentGapDefinitions -> d
+    java.lang.Object[][] visualMarginDefinitions -> e
+    java.util.Map RELATED_GAPS -> a
+    java.util.Map UNRELATED_GAPS -> b
+    java.util.Map CONTAINER_GAPS -> c
+    java.util.Map INDENT_GAPS -> d
+    java.util.Map VISUAL_MARGINS -> e
+    boolean $assertionsDisabled -> a
+    java.lang.Class class$org$jdesktop$layout$AquaLayoutStyle -> a
+    java.util.Map createInsetsMap(java.lang.Object[][]) -> a
+    int getPreferredGap(javax.swing.JComponent,javax.swing.JComponent,int,int,java.awt.Container) -> a
+    java.awt.Insets getPreferredGap(javax.swing.JComponent,int,int) -> a
+    int getContainerGap(javax.swing.JComponent,int,java.awt.Container) -> a
+    java.awt.Insets getContainerGap(java.awt.Container,int) -> a
+    java.awt.Insets getInsets(java.util.Map,java.lang.String,java.lang.String,int) -> a
+    java.awt.Insets getVisualMargin(javax.swing.JComponent) -> a
+    int getSizeStyle(java.awt.Component) -> a
+    java.lang.Class class$(java.lang.String) -> a
+    java.awt.Insets access$000() -> a
+org.jdesktop.layout.AquaLayoutStyle$ComponentInsets -> dT:
+    java.util.Map children -> a
+    java.awt.Insets[] insets -> a
+    java.awt.Insets getInsets(int) -> a
+    void addSubinsets(java.lang.String,org.jdesktop.layout.AquaLayoutStyle$ComponentInsets) -> a
+    org.jdesktop.layout.AquaLayoutStyle$ComponentInsets getSubinsets(java.lang.String) -> a
+org.jdesktop.layout.Baseline -> cm:
+    java.awt.Rectangle viewRect -> a
+    java.awt.Rectangle textRect -> b
+    java.awt.Rectangle iconRect -> c
+    java.awt.Insets EMPTY_INSETS -> a
+    javax.swing.JLabel TABLE_LABEL -> a
+    javax.swing.JLabel LIST_LABEL -> b
+    javax.swing.JLabel TREE_LABEL -> c
+    java.lang.Class CLASSIC_WINDOWS -> c
+    boolean checkedForClassic -> a
+    java.util.Map BASELINE_MAP -> a
+    java.lang.reflect.Method COMPONENT_BASELINE_METHOD -> a
+    java.lang.Class class$java$awt$Component -> a
+    java.lang.Class class$javax$swing$plaf$metal$MetalLookAndFeel -> b
+    int getBaseline(javax.swing.JComponent) -> a
+    java.lang.reflect.Method getBaselineMethod(javax.swing.JComponent) -> a
+    int invokeBaseline(java.lang.reflect.Method,javax.swing.JComponent,int,int) -> a
+    int getBaseline(javax.swing.JComponent,int,int) -> a
+    java.awt.Insets rotateInsets(java.awt.Insets,int) -> a
+    int getMaxTabHeight(javax.swing.JTabbedPane) -> a
+    int getTabbedPaneBaseline(javax.swing.JTabbedPane,int) -> a
+    int getAquaTabbedPaneBaseline(javax.swing.JTabbedPane,int) -> b
+    int getSliderBaseline(javax.swing.JSlider,int) -> a
+    java.lang.Integer getMaxSliderValue(javax.swing.JSlider) -> a
+    java.lang.Integer getMinSliderValue(javax.swing.JSlider) -> b
+    int getProgressBarBaseline(javax.swing.JProgressBar,int) -> a
+    int getTreeBaseline$75c47a48(javax.swing.JTree) -> a
+    int getTableBaseline$339fff00(javax.swing.JTable) -> a
+    int getTextAreaBaseline$40be5604(javax.swing.JTextArea) -> a
+    int getListBaseline$735a3748(javax.swing.JList) -> a
+    int getScrollPaneBaseline$6927aa01(javax.swing.JScrollPane) -> a
+    int getPanelBaseline(javax.swing.JPanel,int) -> a
+    int getSpinnerBaseline(javax.swing.JSpinner,int) -> a
+    int getLabelBaseline(javax.swing.JLabel,int) -> a
+    int getComboBoxBaseline(javax.swing.JComboBox,int) -> a
+    int getSingleLineTextBaseline(javax.swing.text.JTextComponent,int) -> a
+    int getButtonBaseline(javax.swing.AbstractButton,int) -> a
+    void resetRects(javax.swing.JComponent,int) -> a
+    boolean isOceanTheme() -> a
+    boolean isWindows() -> b
+    boolean isMetal() -> c
+    boolean isGTK() -> d
+    boolean isAqua() -> e
+    boolean isXP() -> f
+    int getComponentBaseline$580ef9ba() -> a
+    java.lang.Class class$(java.lang.String) -> a
+org.jdesktop.layout.GnomeLayoutStyle -> fV:
+    int getPreferredGap(javax.swing.JComponent,javax.swing.JComponent,int,int,java.awt.Container) -> a
+    int getContainerGap(javax.swing.JComponent,int,java.awt.Container) -> a
+org.jdesktop.layout.GroupLayout -> dF:
+    boolean autocreatePadding -> a
+    boolean autocreateContainerPadding -> b
+    org.jdesktop.layout.GroupLayout$Group horizontalGroup -> a
+    org.jdesktop.layout.GroupLayout$Group verticalGroup -> b
+    java.util.Map componentInfos -> a
+    java.awt.Container host -> a
+    java.util.List parallelList -> a
+    boolean springsChanged -> c
+    boolean hasPreferredPaddingSprings -> d
+    java.lang.Class class$org$jdesktop$layout$GroupLayout -> a
+    void checkSize(int,int,int,boolean) -> b
+    void checkResizeType(int,boolean) -> b
+    void checkLessThan(int,int) -> a
+    void checkAlignment(int,boolean) -> c
+    boolean isVisible(java.awt.Component) -> a
+    java.lang.String toString() -> toString
+    void dump(java.lang.StringBuffer,org.jdesktop.layout.GroupLayout$Spring,java.lang.String,int) -> a
+    void setHorizontalGroup(org.jdesktop.layout.GroupLayout$Group) -> a
+    void setVerticalGroup(org.jdesktop.layout.GroupLayout$Group) -> b
+    org.jdesktop.layout.GroupLayout$Group createTopLevelGroup(org.jdesktop.layout.GroupLayout$Group) -> a
+    org.jdesktop.layout.GroupLayout$SequentialGroup createSequentialGroup() -> a
+    org.jdesktop.layout.GroupLayout$ParallelGroup createParallelGroup() -> a
+    org.jdesktop.layout.GroupLayout$ParallelGroup createParallelGroup(int) -> a
+    org.jdesktop.layout.GroupLayout$ParallelGroup createParallelGroup(int,boolean) -> a
+    void addLayoutComponent(java.lang.String,java.awt.Component) -> addLayoutComponent
+    void removeLayoutComponent(java.awt.Component) -> removeLayoutComponent
+    java.awt.Dimension preferredLayoutSize(java.awt.Container) -> preferredLayoutSize
+    java.awt.Dimension minimumLayoutSize(java.awt.Container) -> minimumLayoutSize
+    void layoutContainer(java.awt.Container) -> layoutContainer
+    void addLayoutComponent(java.awt.Component,java.lang.Object) -> addLayoutComponent
+    java.awt.Dimension maximumLayoutSize(java.awt.Container) -> maximumLayoutSize
+    float getLayoutAlignmentX(java.awt.Container) -> getLayoutAlignmentX
+    float getLayoutAlignmentY(java.awt.Container) -> getLayoutAlignmentY
+    void invalidateLayout(java.awt.Container) -> invalidateLayout
+    void resetAutopadding(org.jdesktop.layout.GroupLayout$Group,int,int,int,int) -> a
+    void prepare(int) -> a
+    void prepare() -> a
+    boolean hasVisibilityChanged() -> a
+    void checkComponents() -> b
+    void registerComponents(org.jdesktop.layout.GroupLayout$Group,int) -> a
+    java.awt.Dimension adjustSize(int,int) -> a
+    void checkParent(java.awt.Container) -> a
+    org.jdesktop.layout.GroupLayout$ComponentInfo getComponentInfo(java.awt.Component) -> a
+    void adjustAutopadding(boolean) -> a
+    boolean areParallelSiblings(java.awt.Component,java.awt.Component,int) -> a
+    void access$100(int,boolean) -> a
+    boolean access$202(org.jdesktop.layout.GroupLayout,boolean) -> a
+    java.lang.Class class$(java.lang.String) -> a
+    void access$600(int,int,int,boolean) -> a
+    org.jdesktop.layout.GroupLayout$ComponentInfo access$700(org.jdesktop.layout.GroupLayout,java.awt.Component) -> a
+    java.awt.Container access$800(org.jdesktop.layout.GroupLayout) -> a
+    boolean access$900(org.jdesktop.layout.GroupLayout,java.awt.Component,java.awt.Component,int) -> a
+org.jdesktop.layout.GroupLayout$1 -> cW:
+org.jdesktop.layout.GroupLayout$AutopaddingMatch -> fF:
+    org.jdesktop.layout.GroupLayout$ComponentSpring source -> a
+    org.jdesktop.layout.GroupLayout$ComponentSpring target -> b
+    java.lang.String toString(org.jdesktop.layout.GroupLayout$ComponentSpring) -> a
+    java.lang.String toString() -> toString
+org.jdesktop.layout.GroupLayout$AutopaddingSpring -> bp:
+    java.util.List sources -> a
+    org.jdesktop.layout.GroupLayout$ComponentSpring source -> a
+    java.util.List matches -> b
+    int size -> a
+    int lastSize -> b
+    int pref -> d
+    int max -> e
+    int type -> f
+    boolean userCreated -> a
+    org.jdesktop.layout.GroupLayout this$0 -> a
+    void setSources(java.util.List) -> a
+    void clear() -> a
+    void reset() -> b
+    void calculatePadding(int) -> a
+    int calculatePadding(org.jdesktop.layout.LayoutStyle,int,org.jdesktop.layout.GroupLayout$ComponentSpring,org.jdesktop.layout.GroupLayout$ComponentSpring) -> a
+    void add(org.jdesktop.layout.GroupLayout$ComponentSpring,int) -> a
+    void addMatch(org.jdesktop.layout.GroupLayout$ComponentSpring,org.jdesktop.layout.GroupLayout$ComponentSpring) -> a
+    int getMinimumSize0(int) -> a
+    int getPreferredSize0(int) -> b
+    int getMaximumSize0(int) -> d
+    java.lang.String getMatchDescription() -> a
+    java.lang.String toString() -> toString
+org.jdesktop.layout.GroupLayout$BaselineGroup -> j:
+    boolean allSpringsHaveBaseline -> c
+    int prefAscent -> a
+    int prefDescent -> b
+    void setSize(int,int,int) -> a
+    void setSize0(int,int,int) -> b
+    int calculateSize(int,int) -> a
+    void calculateBaseline() -> c
+    void baselineLayout(int,int) -> a
+org.jdesktop.layout.GroupLayout$ComponentInfo -> cX:
+    java.awt.Component component -> a
+    org.jdesktop.layout.GroupLayout$ComponentSpring horizontalSpring -> a
+    org.jdesktop.layout.GroupLayout$ComponentSpring verticalSpring -> b
+    org.jdesktop.layout.GroupLayout$ComponentInfo horizontalMaster -> a
+    org.jdesktop.layout.GroupLayout$ComponentInfo verticalMaster -> b
+    java.util.List horizontalDependants -> a
+    java.util.List verticalDependants -> b
+    int[] horizontalSizes -> a
+    int[] verticalSizes -> b
+    boolean visible -> a
+    void dispose() -> a
+    void removeSpring(org.jdesktop.layout.GroupLayout$Spring) -> a
+    boolean updateVisibility() -> a
+    void setBounds(java.awt.Insets) -> a
+    boolean isLinked(int) -> a
+    void clear() -> b
+    void clear(int[]) -> a
+    int getLinkSize(int,int) -> a
+    int calcLinkSize(java.util.List,int,int) -> a
+    int getDependantSpringSize$61e41e70(java.util.List,int,int) -> b
+    java.awt.Component access$000(org.jdesktop.layout.GroupLayout$ComponentInfo) -> a
+org.jdesktop.layout.GroupLayout$ComponentSpring -> N:
+    java.awt.Component component -> a
+    int origin -> a
+    int min -> b
+    int pref -> d
+    int max -> e
+    int baseline -> f
+    boolean installed -> b
+    boolean $assertionsDisabled -> a
+    org.jdesktop.layout.GroupLayout this$0 -> a
+    int getMinimumSize0(int) -> a
+    int getMinimumSize1(int) -> i
+    int getPreferredSize0(int) -> b
+    int getPreferredSize1(int) -> c
+    int getMaximumSize0(int) -> d
+    int getMaximumSize1(int) -> j
+    int getSizeAlongAxis(int,java.awt.Dimension) -> a
+    int getLinkSize(int,int) -> a
+    void setSize(int,int,int) -> a
+    int getBaseline() -> a
+    boolean isLinked(int) -> a
+    void installIfNecessary(int) -> a
+org.jdesktop.layout.GroupLayout$ContainerAutopaddingSpring -> cB:
+    java.util.List targets -> b
+    org.jdesktop.layout.GroupLayout this$0 -> a
+    void add(org.jdesktop.layout.GroupLayout$ComponentSpring,int) -> a
+    void calculatePadding(int) -> a
+    int updateSize(org.jdesktop.layout.LayoutStyle,org.jdesktop.layout.GroupLayout$ComponentSpring,int) -> a
+    java.lang.String getMatchDescription() -> a
+org.jdesktop.layout.GroupLayout$GapSpring -> U:
+    int min -> a
+    int pref -> b
+    int max -> d
+    int getMinimumSize0(int) -> a
+    int getPreferredSize0(int) -> b
+    int getMaximumSize0(int) -> d
+org.jdesktop.layout.GroupLayout$Group -> ay:
+    java.util.List springs -> a
+    boolean $assertionsDisabled -> a
+    org.jdesktop.layout.GroupLayout this$0 -> a
+    org.jdesktop.layout.GroupLayout$Group addSpring$32081e5a(org.jdesktop.layout.GroupLayout$Spring) -> a
+    org.jdesktop.layout.GroupLayout$Group addSpring(org.jdesktop.layout.GroupLayout$Spring) -> b
+    void setParent(org.jdesktop.layout.GroupLayout$Spring) -> a
+    void setSize(int,int,int) -> a
+    void setSize0(int,int,int) -> b
+    int getMinimumSize0(int) -> a
+    int getPreferredSize0(int) -> b
+    int getMaximumSize0(int) -> d
+    int operator(int,int) -> b
+    int calculateSize(int,int) -> a
+    org.jdesktop.layout.GroupLayout$Spring getSpring(int) -> a
+    int getSize(org.jdesktop.layout.GroupLayout$Spring,int,int) -> a
+    void insertAutopadding(int,java.util.List,java.util.List,java.util.List,java.util.List,boolean) -> a
+    void removeAutopadding() -> a_
+    void resetAutopadding() -> b
+    void calculateAutopadding(int) -> a
+org.jdesktop.layout.GroupLayout$ParallelGroup -> el:
+    int childAlignment -> a
+    boolean resizable -> b
+    org.jdesktop.layout.GroupLayout this$0 -> a
+    org.jdesktop.layout.GroupLayout$ParallelGroup add(org.jdesktop.layout.GroupLayout$Group) -> a
+    org.jdesktop.layout.GroupLayout$ParallelGroup add(java.awt.Component) -> a
+    org.jdesktop.layout.GroupLayout$ParallelGroup add(java.awt.Component,int,int,int) -> a
+    int operator(int,int) -> b
+    int getMinimumSize0(int) -> a
+    int getMaximumSize0(int) -> d
+    void setSize0(int,int,int) -> b
+    void insertAutopadding(int,java.util.List,java.util.List,java.util.List,java.util.List,boolean) -> a
+org.jdesktop.layout.GroupLayout$SequentialGroup -> cF:
+    boolean $assertionsDisabled -> a
+    org.jdesktop.layout.GroupLayout this$0 -> a
+    org.jdesktop.layout.GroupLayout$SequentialGroup add(org.jdesktop.layout.GroupLayout$Group) -> a
+    org.jdesktop.layout.GroupLayout$SequentialGroup add(java.awt.Component,int,int,int) -> a
+    org.jdesktop.layout.GroupLayout$SequentialGroup add(int,int,int) -> a
+    int operator(int,int) -> b
+    void setSize0(int,int,int) -> b
+    void resize(int,int,int) -> c
+    java.util.List buildResizableList(int,boolean) -> a
+    void insertAutopadding(int,java.util.List,java.util.List,java.util.List,java.util.List,boolean) -> a
+org.jdesktop.layout.GroupLayout$Spring -> dr:
+    int size -> a
+    int min -> b
+    int max -> d
+    int pref -> e
+    org.jdesktop.layout.GroupLayout$Spring parent -> a
+    int alignment -> c
+    int getMinimumSize0(int) -> a
+    int getPreferredSize0(int) -> b
+    int getMaximumSize0(int) -> d
+    void setParent(org.jdesktop.layout.GroupLayout$Spring) -> a
+    int getMinimumSize(int) -> e
+    int getPreferredSize(int) -> f
+    int getMaximumSize(int) -> g
+    void clear() -> a
+    void setSize(int,int,int) -> a
+    int getSize() -> b
+    int constrain(int) -> h
+org.jdesktop.layout.GroupLayout$SpringDelta -> aI:
+    int index -> a
+    int delta -> b
+    int compareTo(java.lang.Object) -> compareTo
+    java.lang.String toString() -> toString
+org.jdesktop.layout.LayoutStyle -> fE:
+    boolean USE_CORE_LAYOUT_STYLE -> b
+    org.jdesktop.layout.LayoutStyle layoutStyle -> a
+    javax.swing.LookAndFeel laf -> a
+    boolean $assertionsDisabled -> a
+    java.lang.Class class$org$jdesktop$layout$LayoutStyle -> d
+    org.jdesktop.layout.LayoutStyle getSharedInstance() -> a
+    int getPreferredGap(javax.swing.JComponent,javax.swing.JComponent,int,int,java.awt.Container) -> a
+    int getContainerGap(javax.swing.JComponent,int,java.awt.Container) -> a
+    int getCBRBPadding(javax.swing.JComponent,javax.swing.JComponent,int,int) -> a
+    int getCBRBPadding(javax.swing.JComponent,int,int) -> a
+    int flipDirection(int) -> a
+    int getCBRBPadding(javax.swing.JComponent,int) -> b
+    int getInset(javax.swing.JComponent,int) -> c
+    boolean isLeftAligned(javax.swing.AbstractButton,int) -> a
+    boolean isRightAligned(javax.swing.AbstractButton,int) -> b
+    javax.swing.Icon getIcon(javax.swing.AbstractButton) -> a
+    int getButtonChildIndent(javax.swing.JComponent,int) -> a
+    java.lang.Class class$(java.lang.String) -> a
+org.jdesktop.layout.MetalLayoutStyle -> bN:
+    boolean isOcean -> b
+    java.lang.Class class$javax$swing$plaf$metal$MetalLookAndFeel -> a
+    int getPreferredGap(javax.swing.JComponent,javax.swing.JComponent,int,int,java.awt.Container) -> a
+    int getCBRBPadding(javax.swing.JComponent,javax.swing.JComponent,int,int) -> a
+    int getButtonAdjustment(javax.swing.JComponent,int) -> b
+    int getContainerGap(javax.swing.JComponent,int,java.awt.Container) -> a
+    java.lang.Class class$(java.lang.String) -> b
+org.jdesktop.layout.SwingLayoutStyle -> ch:
+    java.lang.reflect.Method SWING_GET_LAYOUT_STYLE_METHOD -> a
+    java.lang.reflect.Method SWING_GET_PREFERRED_GAP_METHOD -> b
+    java.lang.reflect.Method SWING_GET_CONTAINER_GAP_METHOD -> c
+    java.lang.Object RELATED_TYPE -> a
+    java.lang.Object UNRELATED_TYPE -> b
+    java.lang.Object INDENT_TYPE -> c
+    java.lang.Class class$javax$swing$JComponent -> a
+    java.lang.Class class$java$awt$Container -> b
+    boolean $assertionsDisabled -> a
+    java.lang.Class class$org$jdesktop$layout$SwingLayoutStyle -> c
+    java.lang.Object layoutStyleTypeToComponentPlacement(int) -> a
+    java.lang.Object getSwingLayoutStyle() -> a
+    int getPreferredGap(javax.swing.JComponent,javax.swing.JComponent,int,int,java.awt.Container) -> a
+    int getContainerGap(javax.swing.JComponent,int,java.awt.Container) -> a
+    java.lang.Class class$(java.lang.String) -> a
+org.jdesktop.layout.WindowsLayoutStyle -> fo:
+    int baseUnitX -> a
+    int baseUnitY -> b
+    boolean $assertionsDisabled -> a
+    java.lang.Class class$org$jdesktop$layout$WindowsLayoutStyle -> a
+    int getPreferredGap(javax.swing.JComponent,javax.swing.JComponent,int,int,java.awt.Container) -> a
+    int getContainerGap(javax.swing.JComponent,int,java.awt.Container) -> a
+    int dluToPixels(int,int) -> a
+    void calculateBaseUnits() -> a
+    java.lang.Class class$(java.lang.String) -> a
